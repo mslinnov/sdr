@@ -1,0 +1,1 @@
+import{h as t}from"./moment-fbc5633a.js";const r=a=>{const e=t(),d=t(a);let s;return e.day()<=2?s=e.clone().subtract(1,"week").startOf("week").add(2,"days"):s=e.clone().startOf("week").add(2,"days"),d.isAfter(s,"day")};export{r as g};
