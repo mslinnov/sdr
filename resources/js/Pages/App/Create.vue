@@ -105,7 +105,7 @@
             <Link :href="route('survey.create')" class="flex justify-between px-4 py-2 bg-white dark:bg-slate-900 items-center rounded-2xl drop-shadow-md">
                 <div class="flex justify-start gap-4 items-center">
                     <div class="rounded-full bg-blue-100 p-3">
-                        <img src="/image/icon/formulaire.png" alt="Icone de formulaire" class="aspect-square w-10 object-contain object-center">
+                        <img :src="'/image/icon/formulaire.png'" alt="Icone de formulaire" class="aspect-square w-10 object-contain object-center">
                     </div>
                     <div class="text-blue-600 dark:text-blue-200 font-bold">Questionnaire</div>
                 </div>
@@ -114,7 +114,7 @@
             <Link :href="route('bodyParts')" class="flex justify-between px-4 py-2 bg-white dark:bg-slate-900 items-center rounded-2xl drop-shadow-md">
                 <div class="flex justify-start gap-4 items-center">
                     <div class="rounded-full bg-blue-100 p-3">
-                        <img src="/image/icon/blessures.png" alt="Icone de formulaire" class="aspect-square w-10 object-contain object-center">
+                        <img :src="'/image/icon/blessures.png'" alt="Icone de formulaire" class="aspect-square w-10 object-contain object-center">
                     </div>
                     <div class="text-blue-600 dark:text-blue-200 font-bold">Blessure</div>
                 </div>

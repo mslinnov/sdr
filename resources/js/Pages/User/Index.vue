@@ -27,7 +27,7 @@
         <tr v-for="user in players.data" class="tr-body">
             <td class="td-body w-6 h-6">
                 <img v-if="user.user_image" :src="user.user_image.src" alt="profil picture">
-                <img v-else src="/image/joueur/silhouette.png" alt="profil picture">
+                <img v-else :src="'/image/joueur/silhouette.png'" alt="profil picture">
             </td>
             <td class="td-body">{{user.first_name}} {{user.last_name}}</td>
             <td class=" td-body">

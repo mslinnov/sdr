@@ -8,7 +8,7 @@
         <div class="py-2 px-4 bg-white dark:bg-slate-800 dark:text-gray-200 flex justify-between md:hidden">
             <!-- Logo -->
             <Link :href="route('dashboard')">
-                <img src="/image/sdr.png" alt="Logo du stade de reims" class=" h-12">
+                <img :src="'/image/sdr.png'" alt="Logo du stade de reims" class=" h-12">
             </Link>
 
             <!-- Nav -->
@@ -22,7 +22,7 @@
          bg-white dark:bg-slate-800 py-6 px-10 w-64 border-r border-gray-200 dark:border-gray-700 min-h-screen dark:border-gray-600">
             <!-- Logo -->
             <Link :href="route('dashboard')">
-                <img src="/image/logo.png" alt="Logo du stade de reims" class=" h-20">
+                <img :src="'/image/logo.png'" alt="Logo du stade de reims" class=" h-20">
             </Link>
 
             <!--Nav bar-->

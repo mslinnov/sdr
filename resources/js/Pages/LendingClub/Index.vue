@@ -25,7 +25,7 @@
         <tr v-for="club in clubs.data" class="tr-body">
             <td class="td-body flex items-center justify-start gap-x-4">
                 <img v-if="club.image" :src="club.image.src" alt="Logo du club emprunteur" class="w-8">
-                <img v-else src="/image/club/none.png" alt="Logo du club emprunteur" class="w-8">
+                <img v-else :src="'/image/club/none.png'" alt="Logo du club emprunteur" class="w-8">
                 <span>{{club.name}}</span>
             </td>
 <!--            <td class="td-body flex gap-4">-->
