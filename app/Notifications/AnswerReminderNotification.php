@@ -55,7 +55,7 @@ class AnswerReminderNotification extends Notification
     public function toArray($notifiable)
     {
         return [
-            'message' => "Pense à remplire le questionnaire avant mardi !"
+            'message' => "Pense a remplir le questionnaire avant mardi !"
         ];
     }
 }

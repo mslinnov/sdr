@@ -16,7 +16,7 @@
                 </Link>
                 <div class="align-middle flex gap-2 align-middle items-center">
                     <div class="text-red-600 font-bold text-xl">{{user.first_name}} {{user.last_name}}</div>
-                    <img :src="'/image/joueur/ito_0.png'"
+                    <img :src="user.image[0].src" v-if="user.image[0]"
                          alt="Photo de profil de joueur"
                          class="rounded-full aspect-square w-16 object-cover object-top	">
                 </div>
@@ -119,6 +119,7 @@ const page = usePage()
 const user = computed(
     () => page.props.value.user
 )
+
 const unreadNotificationsCount = computed(
     () => page.props.value.unreadNotificationsCount
 )

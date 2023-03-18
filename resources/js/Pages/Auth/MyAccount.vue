@@ -5,7 +5,7 @@
     </div>
     <div class="flex flex-col gap-4 items-center px-10">
 
-        <img :src="'/image/joueur/ito_0.png'"
+        <img :src="user.image[0].src" v-if="user.image[0]"
              :alt="'Photo de profil du joueur '+user.first_name"
              class="h-40 w-40 rounded-full object-cover object-top	">
 
