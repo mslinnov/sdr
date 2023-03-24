@@ -30,7 +30,8 @@ class OverallConditionController extends Controller
         $overall_condition_types = OverallConditionType::all();
         $last_user_condition = Auth::user()->overallConditions()->get()->last();
 
-        $debug_user = Auth::user();
+//        $debug_user = Auth::user();
+        $debug_user = \auth()->user();
 
         return inertia(
             'App/Create',[
