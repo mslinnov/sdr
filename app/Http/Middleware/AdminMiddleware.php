@@ -6,6 +6,7 @@ use App\Models\OverallCondition;
 use App\Models\OverallConditionType;
 use Closure;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class AdminMiddleware
 {
@@ -22,10 +23,12 @@ class AdminMiddleware
             return $next($request);
         }
         elseif (auth()->check()){
+            $last_user_condition = Auth::user()->overallConditions()->get()->last();
+
             return inertia(
                 'App/Create',[
-                'total_reviews' => OverallCondition::all(),
-                'overall_condition_types' => OverallConditionType::all()
+                'overall_condition_types' => OverallConditionType::all(),
+                'last_user_condition' => $last_user_condition,
             ]);
         }
         else{
