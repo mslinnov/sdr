@@ -16,9 +16,10 @@
                 </div>
 
                 <div class="py-4">
-                    <div class="font-2xl font-bold text-green-600">overall_condition_types</div>
-                {{overall_condition_types}}
+                    <div class="font-2xl font-bold text-green-600">Debug User</div>
+                {{debug_user}}
                 </div>
+
                 <div class="py-4">
                     <div class="font-2xl font-bold text-green-600">last_user_condition</div>
                 {{last_user_condition}}
@@ -151,7 +152,8 @@ import {getHadRespondThisWeek} from "@/Composables/getHadRespondThisWeek";
 
 const props = defineProps({
     overall_condition_types: Array,
-    last_user_condition: Object
+    last_user_condition: Object,
+    debug_user: Object,
 })
 const page = usePage()
 const user = computed(
