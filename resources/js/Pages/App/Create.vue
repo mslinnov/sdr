@@ -2,7 +2,7 @@
     <main class="bg-slate-50 dark:bg-slate-800 w-full pb-10 pt-2">
         <div class="pb-4 m-4">
             <h1 class="font-medium text-2xl ">Content de te revoir!</h1>
-            <span>Salut, Junya ITO</span>
+            <span>Salut, {{user.first_name}}</span>
         </div>
         <div>
             <h2 class="font-medium text-xl pb-4 ml-4">Comment vas-tu ?</h2>
@@ -126,9 +126,9 @@
 </template>
 
 <script setup>
-import {useForm, Link} from '@inertiajs/inertia-vue3'
+import {useForm, Link, usePage} from '@inertiajs/inertia-vue3'
 import {ChevronRightIcon } from '@heroicons/vue/24/solid'
-import {reactive, ref} from "vue";
+import {computed, reactive, ref} from "vue";
 import {getOverallConditionNameById} from "@/Composables/getOverallConditionNameById";
 import {getHadRespondThisWeek} from "@/Composables/getHadRespondThisWeek";
 
@@ -136,6 +136,10 @@ const props = defineProps({
     overall_condition_types: Array,
     last_user_condition: Object
 })
+const page = usePage()
+const user = computed(
+    () => page.props.value.user
+)
 
 let datas;
 datas = reactive({
