@@ -53,7 +53,7 @@
             <div class="my-account-input-box">
                 <div class="inline-flex gap-2 items-center">
                     <LockClosedIcon class="icon-primary"/>
-                    <label for="password_confirmation" class="text-primary">Confirmation du mot de passe</label>
+                    <label for="password_confirmation" class="text-primary">Confirmation</label>
                 </div>
                 <input id="password_confirmation" class="edit-input" v-model="form.password_confirmation" type="password" placeholder="********"/>
             </div>
