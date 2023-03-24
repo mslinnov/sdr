@@ -9,7 +9,7 @@
     <div v-if="!hadARespond.ThisWeek">
         <form @submit.prevent="createForm"
               class="flex flex-col items-center">
-            <div v-for="surveyElement in survey.survey_elements" :id="'survey_element_'+surveyElement.id" :ref="'surveyElement'+surveyElement.id">
+            <div class="w-full" v-for="surveyElement in survey.survey_elements" :id="'survey_element_'+surveyElement.id" :ref="'surveyElement'+surveyElement.id">
                 <SurveyElementBox class="mt-8">
                     <template #image><img :src="'/image/icon/'+surveyElement.survey_input.image" class="img-survey-create"></template>
                     <template #title><div class="dark:text-white text-gray-500 font-medium text-sm text-center">{{surveyElement.survey_input.title}} </div></template>
