@@ -14,8 +14,8 @@
                     <BellIcon class="h-10 w-10 text-gray-800 dark:text-gray-200"/>
                     <span v-show="unreadNotificationsCount>0" class="notification-count-badge">{{ unreadNotificationsCount[0] }}</span>
                 </Link>
-                <div class="align-middle flex gap-2 align-middle items-center">
-                    <div class="text-red-600 font-bold text-xl">{{user.first_name}} {{user.last_name}}</div>
+                <div class="align-middle flex gap-2 align-middle items-center h-16">
+                    <div class="text-red-600 font-bold text-xl pr-2">{{user.first_name}} {{user.last_name}}</div>
                     <img :src="user.image[0].src" v-if="user.image[0]"
                          alt="Photo de profil de joueur"
                          class="rounded-full aspect-square w-16 object-cover object-top	">

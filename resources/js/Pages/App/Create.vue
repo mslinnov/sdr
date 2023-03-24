@@ -8,6 +8,23 @@
             <h2 class="font-medium text-xl pb-4 ml-4">Comment vas-tu ?</h2>
             <!-- TODO: Remplacer le bouton sumbit par le clic sur l'icone -->
 
+<!--            Debug div-->
+            <div>
+                <div class="py-4">
+                    <div class="font-2xl font-bold text-green-600">DATA</div>
+                    {{datas}}
+                </div>
+
+                <div class="py-4">
+                    <div class="font-2xl font-bold text-green-600">overall_condition_types</div>
+                {{overall_condition_types}}
+                </div>
+                <div class="py-4">
+                    <div class="font-2xl font-bold text-green-600">last_user_condition</div>
+                {{last_user_condition}}
+                </div>
+            </div>
+
             <div v-if="!datas.hadARespondThisWeek">
                 <form @submit.prevent="create" id="overallConditionCreateForm">
                     <div class="flex items-center flex-row justify-center gap-4 ">
