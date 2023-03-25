@@ -5,6 +5,11 @@ require_once 'channels.php';
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AuthController;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Broadcast;
+
+Broadcast::channel('private-notifications.{id}', function ($user, $id) {
+    return (int) $user->id === (int) $id;
+});
 
 
 /*
