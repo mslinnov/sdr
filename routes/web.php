@@ -45,7 +45,7 @@ Route::resource('lendingClub.image', \App\Http\Controllers\ImageController::clas
 Route::get('/sendNotification', [\App\Http\Controllers\NotificationController::class, 'sendNotification'])
     ->name('sendNotification')->middleware('admin');
 Route::get('/notifyAllPlayers', [\App\Http\Controllers\NotificationController::class, 'notifyAllPlayers'])
-    ->name('notifyAllPlayers');
+    ->name('notifyAllPlayers')->middleware('admin');
 Route::get('/notifications', [\App\Http\Controllers\NotificationController::class, 'index'])
     ->name('notifications')->middleware('auth');
 Route::get('/markAsRead/{id}', [\App\Http\Controllers\NotificationController::class, 'markAsRead'])
