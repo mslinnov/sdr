@@ -7,6 +7,8 @@ use Illuminate\Bus\Queueable;
 use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Notifications\Messages\MailMessage;
 use Illuminate\Notifications\Notification;
+use Illuminate\Notifications\Messages\BroadcastMessage;
+
 
 class AnswerReminderNotification extends Notification
 {
@@ -57,5 +59,18 @@ class AnswerReminderNotification extends Notification
         return [
             'message' => "Pense a remplir le questionnaire avant mardi !"
         ];
+    }
+
+    /**
+     * Get the broadcast representation of the notification.
+     *
+     * @param  mixed  $notifiable
+     * @return \Illuminate\Notifications\Messages\BroadcastMessage
+     */
+    public function toBroadcast($notifiable)
+    {
+        return new BroadcastMessage([
+            'message' => "Pense a remplir le questionnaire avant mardi !"
+        ]);
     }
 }

@@ -36,7 +36,6 @@ class NotificationController extends Controller{
     public function notifyAllPlayers(){
         $allPlayers = User::all()->where('is_admin',"=",0);
 
-
         foreach ($allPlayers as $player){
             $notif = new AnswerReminderNotification;
             Notification::send($player, $notif);

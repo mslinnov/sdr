@@ -49,8 +49,14 @@ return [
         ],
 
         'ably' => [
-            'driver' => 'ably',
-            'key' => env('ABLY_KEY'),
+            'driver' => 'pusher',
+            'key' => env('ABLY_APP_KEY'),
+            'secret' => env('ABLY_APP_SECRET'),
+            'app_id' => env('ABLY_APP_ID'),
+            'options' => [
+                'host' => env('ABLY_APP_HOST'),
+                'encrypted' => true,
+            ],
         ],
 
         'redis' => [

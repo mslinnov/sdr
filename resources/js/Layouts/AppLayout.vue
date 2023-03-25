@@ -140,11 +140,23 @@ watch(
     }
 )
 
-window.Echo.private(`App.Models.User.${page.props.value.user.id}`)
-    .notification((notification) => {
-    console.log(notification);
-})
+// window.Echo.private(`App.Models.User.${page.props.value.user.id}`)
+//     .notification((notification) => {
+//     console.log(notification);
+// })
 
+</script>
+
+<script>
+export default {
+    created(){
+        console.log('created')
+        window.Echo.private(`App.Models.User.${this.$page.props.user.id}`)
+            .notification((notification) => {
+                console.log(notification);
+            })
+    }
+}
 </script>
 
 <style>
