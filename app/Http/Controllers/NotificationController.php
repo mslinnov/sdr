@@ -40,7 +40,6 @@ class NotificationController extends Controller{
             $notif = new AnswerReminderNotification;
             Notification::send($player, $notif);
 //            $player->notify($notif);
-            dd('notif sent');
         }
 
     }
