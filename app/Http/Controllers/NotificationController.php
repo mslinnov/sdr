@@ -38,12 +38,10 @@ class NotificationController extends Controller{
 
         foreach ($allPlayers as $player){
             $notif = new AnswerReminderNotification;
-            dd('hey', $allPlayers, $player, $notif);
             Notification::send($player, $notif);
+            dd('hey', $allPlayers, $player, $notif);
 //            $player->notify($notif);
-            dump($notif);
         }
-        dd('end');
 
     }
 
