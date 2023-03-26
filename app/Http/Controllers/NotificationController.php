@@ -34,6 +34,7 @@ class NotificationController extends Controller{
     }
 
     public function notifyAllPlayers(){
+        dd('hey');
         $allPlayers = User::all()->where('is_admin',"=",0);
 
         foreach ($allPlayers as $player){
