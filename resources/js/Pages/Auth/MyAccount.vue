@@ -111,7 +111,7 @@
 
 
     <div class="flex flex-col gap-4 items-center p-10">
-        <div><Link class="text-center text-md"> Installer l'application </Link></div>
+        <div><Link class="text-center text-md" v-if="showInstallButton" @click="installPWA"> Installer l'application </Link></div>
         <div><Link class="text-center text-xs" :href="route('logout')" method="delete" as="button"> Déconnexion </Link></div>
     </div>
 
@@ -142,6 +142,29 @@ const update = () => form.put(`/user/${page.props.value.user.id}`)
 function showEditProfil(){
     edit.profil = !edit.profil
     console.log(edit.profil)
+}
+
+const showInstallButton = ref(false);
+const deferredPrompt = ref(null);
+
+window.addEventListener('beforeinstallprompt', (event) => {
+    console.log('addEventListener');
+    event.preventDefault();
+    deferredPrompt.value = event;
+    showInstallButton.value = true;
+});
+
+function installPWA() {
+    deferredPrompt.value.prompt();
+    deferredPrompt.value.userChoice.then((choiceResult) => {
+        if (choiceResult.outcome === 'accepted') {
+            console.log('L\'application a été installée.');
+        } else {
+            console.log('L\'application n\'a pas été installée.');
+        }
+        showInstallButton.value = false;
+        deferredPrompt.value = null;
+    });
 }
 
 </script>

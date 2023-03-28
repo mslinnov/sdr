@@ -1,0 +1,24 @@
+body{
+    background-color: #e2e8f0;
+    color: #121212;
+}
+.main-section{
+    text-align: center;
+    height: 100%;
+    padding: 120px 12px 0 12px;
+}
+
+img{
+    max-width: 120px;
+}
+
+p{
+    font-size: 18px;
+}
+
+@media (prefers-color-scheme: dark) {
+    body {
+        color: #e2e8f0;
+        background: rgb(30 41 59);
+    }
+}
