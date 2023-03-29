@@ -73,32 +73,32 @@
             <div class="my-account-input-box">
                 <div class="inline-flex gap-2 items-center">
                     <IdentificationIcon class="icon-primary"/>
-                    <label for="firstname" class="text-primary">Prénom</label>
+                    <label for="show_firstname" class="text-primary">Prénom</label>
                 </div>
-                <input id="firstname" class="no-edit-input" v-model="form.first_name" type="text"/>
+                <input id="show_firstname" class="no-edit-input" v-model="form.first_name" type="text"/>
             </div>
             <div class="my-account-input-box">
                 <div class="inline-flex gap-2 items-center">
                     <IdentificationIcon class="icon-primary"/>
-                    <label for="lastname" class="text-primary">Nom</label>
+                    <label for="show_lastname" class="text-primary">Nom</label>
                 </div>
-                <input id="lastname" class="no-edit-input" v-model="form.last_name" type="text"/>
+                <input id="show_lastname" class="no-edit-input" v-model="form.last_name" type="text"/>
                 <div v-if="form.errors.last_name" class="input-error">{{ form.errors.last_name }}</div>
             </div>
             <div class="my-account-input-box">
                 <div class="inline-flex gap-2 items-center">
                     <EnvelopeIcon class="icon-primary"/>
-                    <label for="email" class="text-primary">Email</label>
+                    <label for="show_email" class="text-primary">Email</label>
                 </div>
-                <input id="email" class="no-edit-input" v-model="form.email" type="text"/>
+                <input id="show_email" class="no-edit-input" v-model="form.email" type="text"/>
                 <div v-if="form.errors.email" class="input-error">{{ form.errors.email }}</div>
             </div>
             <div class="my-account-input-box">
                 <div class="inline-flex gap-2 items-center">
                     <PhoneIcon class="icon-primary"/>
-                    <label for="phone" class="text-primary">Téléphone</label>
+                    <label for="show_phone" class="text-primary">Téléphone</label>
                 </div>
-                <input id="phone" class="no-edit-input" v-model="form.phone" type="tel"/>
+                <input id="show_phone" class="no-edit-input" v-model="form.phone" type="tel"/>
                 <div v-if="form.errors.phone" class="input-error">{{ form.errors.phone }}</div>
             </div>
             <div class="flex flex-col items-center w-full md:w-1/2">
@@ -112,6 +112,7 @@
 
     <div class="flex flex-col gap-4 items-center p-10">
         <div><Link class="text-center text-md" v-if="showInstallButton" @click="installPWA"> Installer l'application </Link></div>
+        <div id="push-permission"></div>
         <div><Link class="text-center text-xs" :href="route('logout')" method="delete" as="button"> Déconnexion </Link></div>
     </div>
 
@@ -121,6 +122,11 @@
 import { IdentificationIcon, EnvelopeIcon, PhoneIcon, LockClosedIcon } from '@heroicons/vue/24/solid'
 import {Link, usePage, useForm} from "@inertiajs/inertia-vue3";
 import {computed, reactive, ref} from "vue";
+import { onMounted } from 'vue';
+import { main } from '/public/app.js';
+onMounted(() => {
+    main();
+});
 
 const edit = reactive({profil: false});
 const page = usePage()

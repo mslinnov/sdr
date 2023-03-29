@@ -150,7 +150,6 @@ watch(
 <script>
 export default {
     created(){
-        console.log('created')
         window.Echo.private(`App.Models.User.${this.$page.props.user.id}`)
             .notification((notification) => {
                 console.log(notification);

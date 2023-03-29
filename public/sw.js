@@ -59,3 +59,17 @@ self.addEventListener("fetch", (event) => {
         event.respondWith(caches.match(event.request));
     }
 });
+
+self.addEventListener('push', (event) => {
+    console.log('push')
+    const data = event.data ? event.data.json() : {};
+    event.waitUntil(
+        self.registration.showNotification(data.title, {
+            body: data.message,
+            data : data,
+        })
+    )
+
+    console.log(data)
+})
+

@@ -8,6 +8,8 @@ use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Notifications\Messages\MailMessage;
 use Illuminate\Notifications\Notification;
 use Illuminate\Notifications\Messages\BroadcastMessage;
+use NotificationChannels\WebPush\WebPushMessage;
+use NotificationChannels\WebPush\WebPushChannel;
 
 
 class AnswerReminderNotification extends Notification
@@ -31,7 +33,7 @@ class AnswerReminderNotification extends Notification
      */
     public function via($notifiable)
     {
-        return ['database', 'broadcast'];
+        return ['database', 'broadcast', WebPushChannel::class];
     }
 
     /**
@@ -72,5 +74,12 @@ class AnswerReminderNotification extends Notification
         return new BroadcastMessage([
             'message' => "Pense a remplir le questionnaire avant mardi !"
         ]);
+    }
+
+    public function toWebPush($notifiable, $notification){
+        return (new WebPushMessage)
+            ->title('Stade de reims')
+            ->icon('/image/sdr_192.png')
+            ->body('Pense à remplir ton questionnaire avant mardi!');
     }
 }

@@ -12,6 +12,8 @@
         <link rel="manifest" href="/manifest.json">
         <meta name="msapplication-TileColor" content="#da532c">
         <meta name="theme-color" content="#ffffff">
+        <meta name="csrf-token" content="{{ csrf_token() }}">
+
         <script>
             window.addEventListener('load', () => {
                 if ("serviceWorker" in navigator){
@@ -19,8 +21,7 @@
                 }
             })
         </script>
-
-        <meta name="csrf-token" content="{{ csrf_token() }}">
+        <script src="/app.js" defer></script>
 
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/nprogress/0.2.0/nprogress.min.css" />
         @routes

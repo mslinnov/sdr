@@ -53,6 +53,7 @@ Route::get('/markAsRead/{id}', [\App\Http\Controllers\NotificationController::cl
 Route::get('/markAllAsRead', [\App\Http\Controllers\NotificationController::class, 'markAllAsRead'])
     ->name('markAllAsRead')->middleware('auth');
 
+Route::get('/push/notify/{user}', [\App\Http\Controllers\NotificationController::class, 'notify']);
 
 
 /*
@@ -143,5 +144,16 @@ Route::resource('lending-club', \App\Http\Controllers\LendingClubController::cla
     ->except(['destroy', 'index'])->middleware('auth');
 Route::resource('lending-club', \App\Http\Controllers\LendingClubController::class)
     ->only(['index'])->middleware('admin');
+
+
+/*
+|--------------------------------------------------------------------------
+| Notifications Routes
+|--------------------------------------------------------------------------
+*/
+Route::get('/push/key', [\App\Http\Controllers\SubscriptionController::class, 'key'])
+    ->middleware('auth');
+Route::post('/push/subscribe', [\App\Http\Controllers\SubscriptionController::class, 'subscribe'])
+    ->middleware('auth');
 
 Broadcast::routes();
