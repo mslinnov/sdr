@@ -61,13 +61,12 @@ self.addEventListener("fetch", (event) => {
 });
 
 self.addEventListener('push', (event) => {
+    console.log("push")
     const data = event.data ? event.data.json() : {};
     event.waitUntil(
-        self.registration.showNotification(data.title, {
-            body: data.message,
-            data : data,
-        })
+        self.registration.showNotification(data.title, data)
     )
+    console.log(data)
 })
 
 self.addEventListener('notificationclick', (event) => {
@@ -78,7 +77,7 @@ self.addEventListener('notificationclick', (event) => {
 })
 
 async function openUrl(url){
-    const windowClients = await self.clients.matchAll({type: 'window'})
+    const windowClients = await self.clients.matchAll({type: 'window', includeUncontrolled: true})
     for (let i = 0; i < windowClients.length; i++){
         const client = windowClients[i]
         if(client.url === url && 'focus' in client){

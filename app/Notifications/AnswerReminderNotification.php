@@ -80,6 +80,7 @@ class AnswerReminderNotification extends Notification
         return (new WebPushMessage)
             ->title('Stade de reims')
             ->icon('/image/sdr_192.png')
-            ->body('Pense à remplir ton questionnaire avant mardi!');
+            ->body('Pense à remplir ton questionnaire avant mardi!')
+            ->options(['TTL' => 1000]);
     }
 }
