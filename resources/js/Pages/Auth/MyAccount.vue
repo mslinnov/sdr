@@ -125,6 +125,7 @@ import {computed, reactive, ref} from "vue";
 import { onMounted } from 'vue';
 import { main } from '/public/app.js';
 onMounted(() => {
+    alert("Mounted")
     main();
 });
 
