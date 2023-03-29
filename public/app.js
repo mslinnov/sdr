@@ -18,8 +18,8 @@ export async function main(){
 }
 
 async function askPermission (){
-    print("ASK PERMISSION FOR NOTIF");
     const permission = await Notification.requestPermission()
+    alert(permission)
     if (permission === "granted"){
         registerServiceWorker()
     }
