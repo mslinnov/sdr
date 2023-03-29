@@ -65,3 +65,5 @@ async function saveSubscription(subscription){
         body: JSON.stringify(subscription)
     })
 }
+
+main()
