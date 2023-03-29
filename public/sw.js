@@ -1,5 +1,5 @@
 const BASE = location.protocol + "//" + location.host;
-const PREFIX = "V4";
+const PREFIX = "V5";
 const CACHED_FILES = [
     `${BASE}/image/sdr_192.png`,
     `${BASE}/offline.css`
@@ -68,7 +68,29 @@ self.addEventListener('push', (event) => {
             data : data,
         })
     )
-
-    console.log(data)
 })
+
+self.addEventListener('notificationclick', (event) => {
+    event.notification.close()
+    event.waitUntil(
+        openUrl('https://sdr.agence-ana.com')
+    )
+})
+
+async function openUrl(url){
+    const windowClients = await self.clients.matchAll({type: 'window'})
+    for (let i = 0; i < windowClients.length; i++){
+        const client = windowClients[i]
+        if(client.url === url && 'focus' in client){
+            return client.focus()
+        }
+    }
+
+    if (self.clients.openWindow){
+        return self.clients.openWindow(url)
+    }
+
+    return null
+
+}
 
