@@ -56,8 +56,8 @@ class NotificationController extends Controller{
                     'authToken' => $subscription->auth_token,
                 ]),
                 json_encode([
-                    'message' => 'hey',
-                    'title' => 'Sdr'
+                    'message' => 'Pense à répondre aux questionnaires avant mardi !',
+                    'title' => 'Stade de Reims'
                 ])
             );
         }
