@@ -1,11 +1,10 @@
 export async function main(){
     const permission = document.getElementById('push-permission')
 
-
     if (!permission ||
         !('Notification' in window) ||
         !('serviceWorker' in navigator)
-        // || Notification.permission !== "default"
+        || Notification.permission !== "default"
     ){
         return;
     }
@@ -19,7 +18,6 @@ export async function main(){
 
 async function askPermission (){
     const permission = await Notification.requestPermission()
-    alert(permission)
     if (permission === "granted"){
         registerServiceWorker()
     }
@@ -34,8 +32,6 @@ async function registerServiceWorker(){
             applicationServerKey: await getPublicKey(),
         })
     }
-
-    console.log(subscription)
 
     await saveSubscription(subscription)
 
