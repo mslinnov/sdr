@@ -125,10 +125,8 @@ import {computed, reactive, ref} from "vue";
 import { onMounted } from 'vue';
 import { main } from '/public/app.js';
 onMounted(() => {
-    alert("Mounted")
     main();
 });
-alert("Ah bah oui")
 
 const edit = reactive({profil: false});
 const page = usePage()
