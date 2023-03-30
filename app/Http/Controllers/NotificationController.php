@@ -35,11 +35,9 @@ class NotificationController extends Controller{
         Auth::user()->notify(new AnswerReminderNotification());
     }
 
-
     public function notify(User $user){
 
         $user->notify(new AnswerReminderNotification());
-        dd($user);
 //        $auth = [
 //            'VAPID' => [
 //                'subject' => 'Stade de reims',

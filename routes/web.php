@@ -7,10 +7,6 @@ use App\Http\Controllers\AuthController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Broadcast;
 
-Broadcast::channel('private-notifications.{id}', function ($user, $id) {
-    return (int) $user->id === (int) $id;
-});
-
 
 /*
 |--------------------------------------------------------------------------
@@ -54,6 +50,10 @@ Route::get('/markAllAsRead', [\App\Http\Controllers\NotificationController::clas
     ->name('markAllAsRead')->middleware('auth');
 
 Route::get('/push/notify/{user}', [\App\Http\Controllers\NotificationController::class, 'notify']);
+Route::get('/push/key', [\App\Http\Controllers\SubscriptionController::class, 'key'])
+    ->middleware('auth');
+Route::post('/push/subscribe', [\App\Http\Controllers\SubscriptionController::class, 'subscribe'])
+    ->middleware('auth');
 
 
 /*
@@ -144,16 +144,3 @@ Route::resource('lending-club', \App\Http\Controllers\LendingClubController::cla
     ->except(['destroy', 'index'])->middleware('auth');
 Route::resource('lending-club', \App\Http\Controllers\LendingClubController::class)
     ->only(['index'])->middleware('admin');
-
-
-/*
-|--------------------------------------------------------------------------
-| Notifications Routes
-|--------------------------------------------------------------------------
-*/
-Route::get('/push/key', [\App\Http\Controllers\SubscriptionController::class, 'key'])
-    ->middleware('auth');
-Route::post('/push/subscribe', [\App\Http\Controllers\SubscriptionController::class, 'subscribe'])
-    ->middleware('auth');
-
-Broadcast::routes();

@@ -18,6 +18,7 @@ class SubscriptionController extends Controller
     public function subscribe(Guard $guard, Request $request){
 
         $user = Auth::user();
+
         return $user->updatePushSubscription(
             $request->get('endpoint'),
             ($request->get('keys') ?: [])['p256dh'] ?? null,
