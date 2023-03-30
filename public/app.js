@@ -1,4 +1,5 @@
 export async function main(){
+    console.log('main')
     const permission = document.getElementById('push-permission')
 
     if (!permission ||
@@ -17,6 +18,7 @@ export async function main(){
 }
 
 async function askPermission (){
+    console.log('askPermission')
     const permission = await Notification.requestPermission()
     if (permission === "granted"){
         registerServiceWorker()
@@ -24,6 +26,7 @@ async function askPermission (){
 }
 
 async function registerServiceWorker(){
+    console.log('registerSW')
     const registration = await navigator.serviceWorker.register('/sw.js')
     let subscription = await registration.pushManager.getSubscription();
     if (!subscription){
@@ -52,6 +55,7 @@ async function getPublicKey(){
  * @returns {Promise<void>}
  */
 async function saveSubscription(subscription){
+    console.log('save subscription')
     await fetch('/push/subscribe', {
         method: 'post',
         headers: {

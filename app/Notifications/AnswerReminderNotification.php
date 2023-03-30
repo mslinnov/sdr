@@ -33,7 +33,7 @@ class AnswerReminderNotification extends Notification
      */
     public function via($notifiable)
     {
-        return ['database', 'broadcast', WebPushChannel::class];
+        return ['database', WebPushChannel::class];
     }
 
     /**
@@ -42,13 +42,13 @@ class AnswerReminderNotification extends Notification
      * @param  mixed  $notifiable
      * @return \Illuminate\Notifications\Messages\MailMessage
      */
-    public function toMail($notifiable)
-    {
-        return (new MailMessage)
-                    ->line('The introduction to the notification.')
-                    ->action('Notification Action', url('/'))
-                    ->line('Thank you for using our application!');
-    }
+//    public function toMail($notifiable)
+//    {
+//        return (new MailMessage)
+//                    ->line('The introduction to the notification.')
+//                    ->action('Notification Action', url('/'))
+//                    ->line('Thank you for using our application!');
+//    }
 
     /**
      * Get the array representation of the notification.
@@ -59,6 +59,7 @@ class AnswerReminderNotification extends Notification
     public function toArray($notifiable)
     {
         return [
+            'title' => 'Stade de Reims',
             'message' => "Pense a remplir le questionnaire avant mardi !"
         ];
     }
@@ -69,13 +70,18 @@ class AnswerReminderNotification extends Notification
      * @param  mixed  $notifiable
      * @return \Illuminate\Notifications\Messages\BroadcastMessage
      */
-    public function toBroadcast($notifiable)
-    {
-        return new BroadcastMessage([
-            'message' => "Pense a remplir le questionnaire avant mardi !"
-        ]);
-    }
+//    public function toBroadcast($notifiable)
+//    {
+//        return new BroadcastMessage([
+//            'message' => "Pense a remplir le questionnaire avant mardi !"
+//        ]);
+//    }
 
+    /**
+     * @param $notifiable
+     * @param $notification
+     * @return WebPushMessage
+     */
     public function toWebPush($notifiable, $notification){
         return (new WebPushMessage)
             ->title('Stade de reims')
