@@ -9,13 +9,17 @@
     <div class="w-full h-full">
 
         <header class="rounded-b-lg bg-neutral-50 dark:bg-slate-900 drop-shadow-md container mx-auto">
-            <div class="flex p-2 justify-between align-middle items-center">
+            <div class="grid grid-cols-3  p-2 justify-between align-middle items-center">
                 <Link class="relative inline-block" :href="route('notifications')">
                     <BellIcon class="h-10 w-10 text-gray-800 dark:text-gray-200"/>
                     <span v-show="unreadNotificationsCount>0" class="notification-count-badge">{{ unreadNotificationsCount[0] }}</span>
                 </Link>
-                <div class="align-middle flex gap-2 align-middle items-center h-16">
-                    <div class="text-red-600 font-bold text-xl pr-2">{{user.first_name}} {{user.last_name}}</div>
+                <div class="flex flex-col items-center">
+                    <img :src="'image/sdr.png'" class="w-5">
+                    <h1 class="text-red-600 font-bold w-full text-center">Loan Player</h1>
+                </div>
+                <div class="flex gap-2 align-middle items-center h-16">
+                    <div class="text-red-600 font-bold pr-2">{{user.first_name}} {{user.last_name}}</div>
                     <img :src="user.image[0].src" v-if="user.image[0]"
                          alt="Photo de profil de joueur"
                          class="rounded-full aspect-square w-16 object-cover object-top	">
@@ -106,16 +110,25 @@ import {Link, usePage} from "@inertiajs/inertia-vue3";
 import {computed, onMounted, ref, watch} from "vue";
 import moment from "moment/moment";
 
-const current_week = moment(new Date()).week()
+// Récupération de la semaine et du jour courant
+let current_week = moment(new Date()).week()
+const current_day = moment(new Date()).day()
+if (current_day > 2){
+    current_week = current_week + 1
+}
+let week = []
 
-const week = [
-    {day: 'Mon', date: moment().week(current_week).day(1).date(), actif: 'inactive'},
-    {day: 'Tue', date: moment().week(current_week).day(2).date(), actif: 'active'},
-    {day: 'Wed', date: moment().week(current_week).day(3).date(), actif: 'inactive'},
-    {day: 'Thu', date: moment().week(current_week).day(4).date(), actif: 'inactive'},
-    {day: 'Fri', date: moment().week(current_week).day(5).date(), actif: 'inactive'},
-    {day: 'Sat', date: moment().week(current_week).day(6).date(), actif: 'inactive'}
-]
+// Intiialisation du tableau de la semaine en fonction du jour courant
+for (let i = -4; i < 3; i++){
+    const newDay = moment().week(current_week).day(i).format('dddd').substring(0,3)
+    const newDate = moment().week(current_week).day(i).date()
+    let active = 'inactive'
+    if ( current_day === moment().week(current_week).day(i).day() ){
+        active = 'active'
+    }
+    week.push({day: newDay, date: newDate, actif: active})
+}
+
 
 const page = usePage()
 const user = computed(
@@ -145,7 +158,7 @@ watch(
 
 <style>
 .active{
-    @apply bg-blue-700 text-white
+    @apply bg-red-600 text-white
 }
 .inactive{
     @apply bg-white dark:bg-neutral-700

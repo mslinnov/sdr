@@ -32,9 +32,9 @@ class DatabaseSeeder extends Seeder
 
          \App\Models\User::factory()->create([
              'first_name' => 'Admin',
-             'last_name' => 'ITO',
+             'last_name' => 'SDR',
              'email' => 'admin@sdr.com',
-             'password' => 'password',
+             'password' => 'StadeDeReims2k23!',
              'is_admin' => true,
          ]);
 
