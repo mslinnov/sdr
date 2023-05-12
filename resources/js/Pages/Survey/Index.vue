@@ -1,5 +1,5 @@
 <template>
-    <main class="flex justify-between items-start border-b py-6 border-gray-200 dark:border-gray-400">
+    <main class="flex justify-between items-start border-b py-6 border-gray-200">
         <div class="flex flex-col justify-between pb-7">
             <h1 class="h1-title-primary">Surveys List</h1>
         </div>

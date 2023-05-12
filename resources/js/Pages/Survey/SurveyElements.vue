@@ -12,7 +12,7 @@
             <div class="w-full" v-for="surveyElement in survey.survey_elements" :id="'survey_element_'+surveyElement.id" :ref="'surveyElement'+surveyElement.id">
                 <SurveyElementBox class="mt-8">
                     <template #image><img :src="'/image/icon/'+surveyElement.survey_input.image" class="img-survey-create"></template>
-                    <template #title><div class="dark:text-white text-gray-500 font-medium text-sm text-center">{{surveyElement.survey_input.title}} </div></template>
+                    <template #title><div class="text-gray-500 font-medium text-sm text-center">{{surveyElement.survey_input.title}} </div></template>
                     <div v-if="surveyElement.element_type_id === 1" class="flex flex-row justify-evenly	 pt-3">
                         <div v-for="n in 10">
                             <input type="radio" :required="true"
@@ -23,8 +23,7 @@
 
                                 <label :for="'id_'+surveyElement.id+'_'+n"
                                        class="flex items-center flex-col justify-between w-7 text-center rounded-full p-1 cursor-pointer border-2 drop-shadow-sm
-                              dark:hover:text-gray-300 border-white dark:border-slate-700
-                              hover:text-gray-600 dark:text-gray-400 hover:bg-blue-500
+                              border-white hover:text-gray-600 hover:bg-blue-500
                               peer-checked:border-blue-500 peer-checked:border-2 peer-checked:bg-blue-600"
                                        :class="'survey-scale-selector-'+n"
                                 @click="resetFormElement">

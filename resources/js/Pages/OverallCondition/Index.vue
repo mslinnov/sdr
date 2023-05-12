@@ -1,7 +1,7 @@
 <template>
     <div>
-        <div class="gap-x-24 items-center px-4 py-2 border-b border-gray-200 dark:border-gray-700">
-            <h1 class="text-2xl font-semibold leading-relaxed text-gray-800 dark:text-gray-200">État de forme générale des joueurs</h1>
+        <div class="gap-x-24 items-center px-4 py-2 border-b border-gray-200">
+            <h1 class="text-2xl font-semibold leading-relaxed text-gray-800">État de forme générale des joueurs</h1>
         </div>
 
         <Box class="col-span-12 lg:col-span-6 my-4">

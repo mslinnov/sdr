@@ -1,5 +1,5 @@
 <template>
-    <div class="rounded-md px-2 pb-2 shadow-md dark:text-gray-300 bg-white dark:bg-slate-700 flex flex-col items-center gap-4 md:w-96 mx-auto">
+    <div class="rounded-md px-2 pb-2 shadow-md bg-white flex flex-col items-center gap-4 md:w-96 mx-auto">
 
         <div class="-mt-4">
             <slot name="image"></slot>

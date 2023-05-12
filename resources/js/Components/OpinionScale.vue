@@ -3,17 +3,17 @@
         <div class="flex items-center flex-row">
             <div v-for="answer in answers"
                  class="w-12 flex items-center flex-col">
-                <div class="text-gray-600 dark:text-gray-100 text-sm pb-2">
+                <div class="text-gray-600 text-sm pb-2">
                     {{answer.quantity}} %
                 </div>
-                <div class=" h-32 flex flex-col flex-nowrap justify-end w-8 bg-gray-200 dark:bg-gray-300 rounded-sm overflow-hidden">
-                    <div class="bg-sky-800 dark:bg-sky-700 overflow-hidden" role="progressbar"
+                <div class=" h-32 flex flex-col flex-nowrap justify-end w-8 bg-gray-200rounded-sm overflow-hidden">
+                    <div class="bg-sky-800 overflow-hidden" role="progressbar"
                          :style="{'height': answer.quantity_string}"
                          style="width: 100%" aria-valuenow="{{answer.quantity}}"
                          aria-valuemin="0"
                          aria-valuemax="100"></div>
                 </div>
-                <div class="text-gray-600 dark:text-gray-100 text-sm pt-2">
+                <div class="text-gray-600 text-sm pt-2">
                     {{ answer.name }}
                 </div>
             </div>

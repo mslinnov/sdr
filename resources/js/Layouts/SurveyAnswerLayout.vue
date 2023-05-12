@@ -3,8 +3,8 @@
         {{page.props.value.flash.success}}
     </div>
 
-    <nav class="w-full bg-white dark:bg-slate-800 z-20 fixed top-O border-b border-slate-100 dark:border-slate-700">
-        <div class="p-2 h-10 flex justify-between text-xs md:text-sm items-center border-b border-slate-100 dark:border-slate-700">
+    <nav class="w-full bg-white z-20 fixed top-O border-b border-slate-100">
+        <div class="p-2 h-10 flex justify-between text-xs md:text-sm items-center border-b border-slate-100">
             <Link :href="route('survey.index')">Dashbord / <slot name="header"></slot></Link>
             <div></div>
             <div></div>

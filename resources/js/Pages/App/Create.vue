@@ -1,5 +1,5 @@
 <template>
-    <main class="bg-slate-50 dark:bg-slate-800 w-full pb-10 pt-2">
+    <main class="bg-slate-50 w-full pb-10 pt-2">
         <div class="pb-4 m-4">
             <h1 class="font-medium text-2xl ">Content de te revoir!</h1>
             <span>Salut, {{user.first_name}}</span>
@@ -21,7 +21,7 @@
                             />
                             <label :for="overall_condition_type.id"
                                    class="overallCondition_btn flex items-center flex-col justify-between w-20 text-center rounded-md px-4 py-2 bg-white cursor-pointer border border-white drop-shadow-sm
-                              dark:hover:text-gray-300 dark:border-gray-700 dark:peer-checked:text-blue-500 peer-checked:border-blue-600 peer-checked:bg-blue-200 peer-checked:text-blue-600 hover:text-gray-600 hover:bg-gray-100 dark:text-gray-400 dark:bg-gray-800 dark:hover:bg-gray-700"
+                               peer-checked:border-blue-600 peer-checked:bg-blue-200 peer-checked:text-blue-600 hover:text-gray-600 hover:bg-gray-100"
                             >
                                 <img :src="'/image/overall_condition_type/' + overall_condition_type.image"
                                      :alt="overall_condition_type.name + ' emoji'"
@@ -56,7 +56,7 @@
                             />
                             <label :for="overall_condition_type.id"
                                    class="overallCondition_btn flex items-center flex-col justify-between w-20 text-center rounded-md px-4 py-2 bg-white cursor-pointer border border-white drop-shadow-sm
-                              dark:hover:text-gray-300 dark:border-gray-700 dark:peer-checked:text-blue-500 peer-checked:border-blue-600 peer-checked:bg-blue-200 peer-checked:text-blue-600 hover:text-gray-600 hover:bg-gray-100 dark:text-gray-400 dark:bg-gray-800 dark:hover:bg-gray-700"
+                               peer-checked:border-blue-600 peer-checked:bg-blue-200 peer-checked:text-blue-600 hover:text-gray-600 hover:bg-gray-100"
                             >
                                 <img :src="'/image/overall_condition_type/' + overall_condition_type.image"
                                      :alt="overall_condition_type.name + ' emoji'"
@@ -85,7 +85,7 @@
                         <img :src="'/image/overall_condition_type/' + lastCondition.name + '.png'"
                              :alt="lastCondition.name + ' emoji'"
                              class="h-12 w-12">
-                        <div class="text-gray-600 dark:text-gray-100 text-sm ">
+                        <div class="text-gray-600 text-sm ">
                             {{ lastCondition.name }}
                         </div>
                     </div>
@@ -102,23 +102,23 @@
 
         </div>
         <div class="flex flex-col m-4 gap-4">
-            <Link :href="route('survey.create')" class="flex justify-between px-4 py-2 bg-white dark:bg-slate-900 items-center rounded-2xl drop-shadow-md">
+            <Link :href="route('survey.create')" class="flex justify-between px-4 py-2 bg-white items-center rounded-2xl drop-shadow-md">
                 <div class="flex justify-start gap-4 items-center">
                     <div class="rounded-full bg-blue-100 p-3">
                         <img :src="'/image/icon/formulaire.png'" alt="Icone de formulaire" class="aspect-square w-10 object-contain object-center">
                     </div>
-                    <div class="text-blue-600 dark:text-blue-200 font-bold">Questionnaire</div>
+                    <div class="text-blue-600 font-bold">Questionnaire</div>
                 </div>
-                <ChevronRightIcon class="h-6 w-6 text-gray-700 dark:text-gray-200"/>
+                <ChevronRightIcon class="h-6 w-6 text-gray-700"/>
             </Link>
-            <Link :href="route('bodyParts')" class="flex justify-between px-4 py-2 bg-white dark:bg-slate-900 items-center rounded-2xl drop-shadow-md">
+            <Link :href="route('bodyParts')" class="flex justify-between px-4 py-2 bg-white items-center rounded-2xl drop-shadow-md">
                 <div class="flex justify-start gap-4 items-center">
                     <div class="rounded-full bg-blue-100 p-3">
                         <img :src="'/image/icon/blessures.png'" alt="Icone de formulaire" class="aspect-square w-10 object-contain object-center">
                     </div>
-                    <div class="text-blue-600 dark:text-blue-200 font-bold">Blessure</div>
+                    <div class="text-blue-600 font-bold">Blessure</div>
                 </div>
-                <ChevronRightIcon class="h-6 w-6 text-gray-700 dark:text-gray-200"/>
+                <ChevronRightIcon class="h-6 w-6 text-gray-700"/>
             </Link>
         </div>
     </main>

@@ -1,7 +1,7 @@
 <template>
 
     <div class="p-6 shadow-sm flex flex-col gap-4">
-        <div class="text-gray-500 dark:text-gray-100 font-medium">
+        <div class="text-gray-500 font-medium">
             <div> Ecusson du club </div>
         </div>
         <img :src="lendingClubImage.src" alt="Ecusson du club" class="rounded-full object-contain h-20 w-20 m-auto mt-4">

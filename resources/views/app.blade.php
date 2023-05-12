@@ -30,7 +30,7 @@
 
     </head>
 
-    <body class="bg-white dark:bg-gray-800 dark:text-gray-200">
+    <body class="bg-white">
     @inertia
     </body>
 </html>

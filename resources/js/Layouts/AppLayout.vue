@@ -8,10 +8,10 @@
 
     <div class="w-full h-full">
 
-        <header class="rounded-b-lg bg-neutral-50 dark:bg-slate-900 drop-shadow-md container mx-auto">
+        <header class="rounded-b-lg bg-neutral-50 drop-shadow-md container mx-auto">
             <div class="grid grid-cols-3  p-2 justify-between align-middle items-center">
                 <Link class="relative inline-block" :href="route('notifications')">
-                    <BellIcon class="h-10 w-10 text-gray-800 dark:text-gray-200"/>
+                    <BellIcon class="h-10 w-10 text-gray-800"/>
                     <span v-show="unreadNotificationsCount>0" class="notification-count-badge">{{ unreadNotificationsCount[0] }}</span>
                 </Link>
                 <div class="flex flex-col items-center">
@@ -35,12 +35,12 @@
             </div>
         </header>
 
-        <section class="bg-slate-50 container mx-auto dark:bg-gray-800 pb-20">
+        <section class="bg-slate-50 container mx-auto pb-20">
             <slot>
             </slot>
         </section>
 
-        <menu class=" py-4 px-12 border-solid border-t border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-900 w-full fixed bottom-0 left-0 right-0
+        <menu class=" py-4 px-12 border-solid border-t border-slate-200 bg-white w-full fixed bottom-0 left-0 right-0
         text-white flex justify-between container mx-auto">
             <Link :href="route('app-index')">
                 <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 21.005 21.837">
@@ -161,7 +161,7 @@ watch(
     @apply bg-red-600 text-white
 }
 .inactive{
-    @apply bg-white dark:bg-neutral-700
+    @apply bg-white
 }
 </style>
 
