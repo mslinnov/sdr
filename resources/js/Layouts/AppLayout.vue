@@ -27,10 +27,10 @@
             </div>
             <div class="flex p-4 justify-between align-middle items-center">
                 <div v-for="day in week"
-                     class="flex px-2 py-5 flex-col items-center drop-shadow-md rounded-full w-12"
+                     class="flex px-1 py-4 flex-col items-center drop-shadow-md rounded-full w-12"
                      :class="day.actif">
-                    <span class="text-2xl font-bold">{{day.date}}</span>
-                    <span class="text-s">{{ day.day }}</span>
+                    <span class="text-xl font-bold">{{day.date}}</span>
+                    <span class="text-sm">{{ day.day }}</span>
                 </div>
             </div>
         </header>

@@ -3,7 +3,9 @@
 namespace App\Http\Controllers;
 
 use App\Models\BodyPart;
+use App\Models\Injury;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class BodyPartsController extends Controller
 {
@@ -11,8 +13,31 @@ class BodyPartsController extends Controller
         return inertia('BodyParts/Index');
     }
 
+    /**
+     * @return \Inertia\Response|\Inertia\ResponseFactory
+     */
     public function create(){
-        return inertia('BodyParts/Create');
+
+        $from = date('2023-05-10');
+        $to = date('2023-05-16');
+
+        $injuries = Injury::where('user_id', Auth::user()->id)->whereBetween('updated_at', [$from, $to])->get();
+        $injuriesTab = [];
+        foreach ($injuries as $injury){
+            $bodyPart = BodyPart::find($injury->body_part_id);
+            $injuryElement = [
+                'value' => $injury->value,
+                'need_treatment' => $injury->need_treatment,
+                'body_part_name' => $bodyPart->name,
+            ];
+
+            $injuriesTab[] = $injuryElement;
+        }
+
+        return inertia('BodyParts/Create',
+            [
+                'injuries' => $injuriesTab,
+            ]);
     }
 
     public function store(Request $request){

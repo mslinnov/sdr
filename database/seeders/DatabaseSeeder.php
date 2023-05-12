@@ -318,7 +318,7 @@ class DatabaseSeeder extends Seeder
          BodyPart::factory()->create(['name'=>'Avant_Pectoraux_Gauche',]);
          BodyPart::factory()->create(['name'=>'Avant_Biceps_Gauche',]);
          BodyPart::factory()->create(['name'=>'Avant_Coude_Gauche',]);
-         BodyPart::factory()->create(['name'=>'Avant_Avant',]);
+         BodyPart::factory()->create(['name'=>'Avant_Bras_Gauche',]);
          BodyPart::factory()->create(['name'=>'Avant_Poignet_Gauche',]);
          BodyPart::factory()->create(['name'=>'Avant_Main_Gauche',]);
          BodyPart::factory()->create(['name'=>'Avant_Pectoraux_Gauche_2',]);
@@ -336,7 +336,7 @@ class DatabaseSeeder extends Seeder
          BodyPart::factory()->create(['name'=>'Avant_Pectoraux_Droit',]);
          BodyPart::factory()->create(['name'=>'Avant_Biceps_Droit',]);
          BodyPart::factory()->create(['name'=>'Avant_Coude_Droit',]);
-         BodyPart::factory()->create(['name'=>'Avant_Avant',]);
+         BodyPart::factory()->create(['name'=>'Avant_Bras_Droit',]);
          BodyPart::factory()->create(['name'=>'Avant_Poignet_Droit',]);
          BodyPart::factory()->create(['name'=>'Avant_Main_Droit',]);
          BodyPart::factory()->create(['name'=>'Avant_Pectoraux_Droit_2',]);

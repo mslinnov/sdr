@@ -23,7 +23,7 @@
                         <path @click="showInjuryBox('Avant_Pectoraux_Gauche')" id="Avant_Pectoraux_Gauche" data-name="Avant Pectoraux Gauche" d="M9733.419,5659.408c-.231-.672-.733-2.2-.422-7.032s.437-8.85,1.428-13.1,1.555-8.524,3-11.385a19.827,19.827,0,0,1,5.251-6.852c2.466-2.115,6.249-2.915,9.346-3.771s5.548-.8,11.712-1.227,13.961-.888,14.388,0,.466,35.1,0,36.338-7.165,6.8-8.236,7.032S9733.651,5660.08,9733.419,5659.408Z" transform="translate(-9692.62 -5532.211)" fill="#c4c4c4" stroke="#141313" stroke-linejoin="round" stroke-width="1"/>
                         <path @click="showInjuryBox('Avant_Biceps_Gauche')" id="Avant_Biceps_Gauche" data-name="Avant Biceps Gauche" d="M9688.516,5736.787c.921.479.383,7.189.914,10.486s1.654,10.775,1.745,12.813.582,3.229.279,6.113-.494,5.16-1.21,5.655-24.4-2.656-24.613-3.336,1.035-4.283,1.579-6.1,1.117-3.615,1.395-5.041.69-4.83,1.1-6.979.2-5.842.771-6.494S9687.6,5736.31,9688.516,5736.787Z" transform="translate(-9651.529 -5606.239)" fill="#c4c4c4" stroke="#141313" stroke-width="1"/>
                         <path @click="showInjuryBox('Avant_Coude_Gauche')" id="Avant_Coude_Gauche" data-name="Avant Coude Gauche" d="M9654.6,5826.935c1.248-.565,22.389,3.413,22.895,4.318s-2.149,5.306-2.666,7.775-.51,7.367-1.285,7.742-11.722-.489-13.817-1.051-9.949-1.021-10.445-1.827,2.131-8.9,2.131-8.9S9653.356,5827.5,9654.6,5826.935Z" transform="translate(-9641.524 -5661.268)" fill="#c4c4c4" stroke="#141313" stroke-width="1"/>
-                        <path @click="showInjuryBox('Avant_Avant')" id="Avant_Avant-Bras_Gauche" data-name="Avant Avant-Bras Gauche" d="M9638.9,5882.907c1.122-.894,23.141.777,23.931,1.554s-.126,10.173-.841,12.882-4.609,13.588-6.146,18.118-7.493,18.214-8.295,18.936-12.179,1.489-13.369.821-.688-19.3-.522-20.616,1.155-13.8,1.7-16.745S9637.78,5883.8,9638.9,5882.907Z" transform="translate(-9631.869 -5695.323)" fill="#c4c4c4" stroke="#141313" stroke-width="1"/>
+                        <path @click="showInjuryBox('Avant_Bras_Gauche')" id="Avant_Bras_Gauche" data-name="Avant Avant-Bras Gauche" d="M9638.9,5882.907c1.122-.894,23.141.777,23.931,1.554s-.126,10.173-.841,12.882-4.609,13.588-6.146,18.118-7.493,18.214-8.295,18.936-12.179,1.489-13.369.821-.688-19.3-.522-20.616,1.155-13.8,1.7-16.745S9637.78,5883.8,9638.9,5882.907Z" transform="translate(-9631.869 -5695.323)" fill="#c4c4c4" stroke="#141313" stroke-width="1"/>
                         <path @click="showInjuryBox('Avant_Poignet_Gauche')" id="Avant_Poignet_Gauche" data-name="Avant Poignet Gauche" d="M9634.621,6026.273c-1.489.87-2.289,7.063-1.581,8.1s11.218,2.06,12.013,1.111,2.166-9.894,1.185-10.289S9636.111,6025.4,9634.621,6026.273Z" transform="translate(-9631.483 -5782.291)" fill="#c4c4c4" stroke="#141313" stroke-width="1"/>
                         <path @click="showInjuryBox('Avant_Main_Gauche')" id="Avant_Main_Gauche" data-name="Avant Main Gauche" d="M9631.66,6059.486c-.89.832-1.964,5.688-1.964,8.119s-.55,9.61,0,12.462.912,6.291,1.964,8.189a41.473,41.473,0,0,0,5.471,6.808,10.676,10.676,0,0,0,4.157,2.84c1.788.7,5.938,1.375,6.415.466a2.358,2.358,0,0,0,0-2.314c-.322-.534-1.941-.95-3.273-.992s-3.046-1.618-3.985-2.306-2.3-3.36-2.733-4.227-1.589-3.317-1.465-4.73.266-3.325.885-4.046,2.789-1.446,3.313-.8a8.9,8.9,0,0,1,.844,3.295,23.17,23.17,0,0,0,.68,3.476c.449,1.647.4,1.746,1.651,2.8s1.57.563,2.062-.275.27-3.351,0-5.33a53.181,53.181,0,0,1-1-6.709c-.089-2.712.188-6.98,0-8.611s-.25-5.488-1.058-7.134-2.956-1.845-4.776-1.976S9632.552,6058.654,9631.66,6059.486Z" transform="translate(-9629.452 -5802.682)" fill="#c4c4c4" stroke="#141313" stroke-width="1"/>
                         <path @click="showInjuryBox('Avant_Pectoraux_Gauche_2')" id="Avant_Pectoraux_Gauche_2" data-name="Avant Pectoraux Gauche" d="M9732.154,5730.919c-1.63,2.095,1.369,10.6,2.568,15.665s2.5,11.026,4.271,21.175,2.835,19.479,2.835,22.814c0,4.292-.722,14.357,1.5,17.587s18.808,8.563,22.059,9.677,11.6,4.172,12.576,3.223,1.736-95.514,0-96.069-3.156,4.341-5.911,5.126S9733.784,5728.826,9732.154,5730.919Z" transform="translate(-9691.876 -5599.024)" fill="#c4c4c4" stroke="#141313" stroke-width="1"/>
@@ -43,7 +43,7 @@
                         <path @click="showInjuryBox('Avant_Pectoraux_Droit')" id="Avant_Pectoraux_Droit" data-name="Avant Pectoraux Droit" d="M9777.931,5659.408c.231-.672.732-2.2.421-7.032s-.435-8.85-1.427-13.1-1.556-8.524-3-11.385a19.848,19.848,0,0,0-5.25-6.852c-2.468-2.115-6.25-2.915-9.346-3.771s-5.549-.8-11.713-1.227-13.962-.888-14.387,0-.467,35.1,0,36.338,7.165,6.8,8.235,7.032S9777.7,5660.08,9777.931,5659.408Z" transform="translate(-9731.604 -5532.211)" fill="#c4c4c4" stroke="#141313" stroke-linejoin="round" stroke-width="1"/>
                         <path @click="showInjuryBox('Avant_Biceps_Droit')" id="Avant_Biceps_Droit" data-name="Avant Biceps Droit" d="M9668.641,5736.787c-.919.479-.382,7.189-.914,10.486s-1.652,10.775-1.744,12.813-.582,3.229-.279,6.113.5,5.16,1.211,5.655,24.4-2.656,24.613-3.336-1.035-4.283-1.58-6.1-1.117-3.615-1.395-5.041-.69-4.83-1.1-6.979-.2-5.842-.77-6.494S9669.561,5736.31,9668.641,5736.787Z" transform="translate(-9618.502 -5606.239)" fill="#c4c4c4" stroke="#141313" stroke-width="1"/>
                         <path @click="showInjuryBox('Avant_Coude_Droit')" id="Avant_Coude_Droit" data-name="Avant Coude Droit" d="M9672.182,5826.935c-1.248-.565-22.39,3.413-22.9,4.318s2.149,5.306,2.665,7.775.513,7.367,1.286,7.742,11.723-.489,13.817-1.051,9.951-1.021,10.446-1.827-2.131-8.9-2.131-8.9S9673.431,5827.5,9672.182,5826.935Z" transform="translate(-9598.136 -5661.268)" fill="#c4c4c4" stroke="#141313" stroke-width="1"/>
-                        <path @click="showInjuryBox('Avant_Avant')" id="Avant_Avant-Bras_Droit" data-name="Avant Avant-Bras Droit" d="M9657.645,5882.907c-1.12-.894-23.14.777-23.929,1.554s.125,10.173.839,12.882,4.61,13.588,6.147,18.118,7.493,18.214,8.294,18.936,12.18,1.489,13.37.821.688-19.3.521-20.616-1.155-13.8-1.7-16.745S9658.765,5883.8,9657.645,5882.907Z" transform="translate(-9577.551 -5695.323)" fill="#c4c4c4" stroke="#141313" stroke-width="1"/>
+                        <path @click="showInjuryBox('Avant_Bras_Droit')" id="Avant_Bras_Droit" data-name="Avant Avant-Bras Droit" d="M9657.645,5882.907c-1.12-.894-23.14.777-23.929,1.554s.125,10.173.839,12.882,4.61,13.588,6.147,18.118,7.493,18.214,8.294,18.936,12.18,1.489,13.37.821.688-19.3.521-20.616-1.155-13.8-1.7-16.745S9658.765,5883.8,9657.645,5882.907Z" transform="translate(-9577.551 -5695.323)" fill="#c4c4c4" stroke="#141313" stroke-width="1"/>
                         <path @click="showInjuryBox('Avant_Poignet_Droit')" id="Avant_Poignet_Droit" data-name="Avant Poignet Droit" d="M9644.735,6026.273c1.49.87,2.289,7.063,1.582,8.1s-11.219,2.06-12.014,1.111-2.165-9.894-1.185-10.289S9643.244,6025.4,9644.735,6026.273Z" transform="translate(-9560.747 -5782.291)" fill="#c4c4c4" stroke="#141313" stroke-width="1"/>
                         <path @click="showInjuryBox('Avant_Main_Droit')" id="Avant_Main_Droit" data-name="Avant Main Droit" d="M9645.8,6059.486c.889.832,1.965,5.688,1.965,8.119s.548,9.61,0,12.462-.912,6.291-1.965,8.189a41.473,41.473,0,0,1-5.471,6.808,10.672,10.672,0,0,1-4.158,2.84c-1.787.7-5.937,1.375-6.414.466a2.358,2.358,0,0,1,0-2.314c.321-.534,1.941-.95,3.273-.992s3.046-1.618,3.984-2.306,2.3-3.36,2.733-4.227,1.59-3.317,1.465-4.73-.266-3.325-.884-4.046-2.79-1.446-3.314-.8a8.914,8.914,0,0,0-.844,3.295,23.1,23.1,0,0,1-.678,3.476c-.45,1.647-.4,1.746-1.653,2.8s-1.569.563-2.061-.275-.27-3.351,0-5.33a53.722,53.722,0,0,0,1-6.709c.089-2.712-.188-6.98,0-8.611s.25-5.488,1.057-7.134,2.957-1.845,4.776-1.976S9644.907,6058.654,9645.8,6059.486Z" transform="translate(-9560.881 -5802.682)" fill="#c4c4c4" stroke="#141313" stroke-width="1"/>
                         <path @click="showInjuryBox('Avant_Pectoraux_Droit_2')" id="Avant_Pectoraux_Droit_2" data-name="Avant Pectoraux Droit" d="M9778.526,5730.919c1.63,2.095-1.37,10.6-2.569,15.665s-2.5,11.026-4.271,21.175-2.835,19.479-2.835,22.814c0,4.292.725,14.357-1.5,17.587s-18.808,8.563-22.059,9.677-11.6,4.172-12.574,3.223-1.737-95.514,0-96.069,3.154,4.341,5.91,5.126S9776.9,5728.826,9778.526,5730.919Z" transform="translate(-9731.679 -5599.024)" fill="#c4c4c4" stroke="#141313" stroke-width="1"/>
@@ -132,7 +132,7 @@
                     </div>
 
                     <div v-if="formInjury.showSubmit">
-                        <div class="text-gray-500 text-center font-medium text-sm">Réa ?</div>
+                        <div class="text-gray-500 text-center font-medium text-sm">Es-tu en réathlétisation ? ?</div>
                         <div class="flex gap-4 justify-center">
                             <button class="py-2.5 px-6 text-white bg-blue-600 rounded-full gap-x-2 items-center hover:bg-blue-700 text-sm"
                                     type="button" @click="treatment(true)"> OUI </button>
@@ -149,8 +149,12 @@
 </template>
 
 <script setup>
-import {reactive} from "vue";
+import {reactive, onMounted} from "vue";
 import {useForm} from "@inertiajs/inertia-vue3";
+
+const props = defineProps({
+    'injuries': Array
+})
 
 const formInjury = reactive({
     bodyPart: '',
@@ -160,6 +164,92 @@ const formInjury = reactive({
     showForm: false,
     showSubmit: false,
 })
+
+const bodyFrontLeft = [
+    {id:"Avant_Tete_Gauche", color:"#c4c4c4"},
+    {id:"Avant_Cou_Gauche", color:"#c4c4c4"},
+    {id:"Avant_Epaule_Gauche", color:"#c4c4c4"},
+    {id:"Avant_Pectoraux_Gauche", color:"#c4c4c4"},
+    {id:"Avant_Biceps_Gauche", color:"#c4c4c4"},
+    {id:"Avant_Coude_Gauche", color:"#c4c4c4"},
+    {id:"Avant_Bras_Gauche", color:"#c4c4c4"},
+    {id:"Avant_Poignet_Gauche", color:"#c4c4c4"},
+    {id:"Avant_Main_Gauche", color:"#c4c4c4"},
+    {id:"Avant_Pectoraux_Gauche_2", color:"#c4c4c4"},
+    {id:"Psoas_Gauche", color:"#c4c4c4"},
+    {id:"Aine_Gauche", color:"#c4c4c4"},
+    {id:"Avant_Adducteur_Gauche", color:"#c4c4c4"},
+    {id:"Quadriceps_Gauche", color:"#c4c4c4"},
+    {id:"Avant_Genou_Gauche", color:"#c4c4c4"},
+    {id:"Avant_Mollet_Gauche", color:"#c4c4c4"},
+    {id:"Cheville_Gauche", color:"#c4c4c4"},
+]
+const bodyFrontRight = [
+    {id:"Avant_Tete_Droit", color:"#c4c4c4"},
+    {id:"Avant_Cou_Droit", color:"#c4c4c4"},
+    {id:"Avant_Epaule_Droit", color:"#c4c4c4"},
+    {id:"Avant_Pectoraux_Droit_2", color:"#c4c4c4"},
+    {id:"Avant_Biceps_Droit", color:"#c4c4c4"},
+    {id:"Avant_Coude_Droit", color:"#c4c4c4"},
+    {id:"Avant_Bras_Droit", color:"#c4c4c4"},
+    {id:"Avant_Poignet_Droit", color:"#c4c4c4"},
+    {id:"Avant_Main_Droit", color:"#c4c4c4"},
+    {id:"Avant_Pectoraux_Droit", color:"#c4c4c4"},
+    {id:"Psoas_Droit", color:"#c4c4c4"},
+    {id:"Aine_Droit", color:"#c4c4c4"},
+    {id:"Avant_Adducteur_Droit", color:"#c4c4c4"},
+    {id:"Quadriceps_Droit", color:"#c4c4c4"},
+    {id:"Avant_Genou_Droit", color:"#c4c4c4"},
+    {id:"Avant_Mollet_Droit", color:"#c4c4c4"},
+    {id:"Cheville_Droit", color:"#c4c4c4"},
+]
+
+bodyFrontLeft.forEach(BodyPart => {
+    props.injuries.forEach(injury => {
+        if (injury.body_part_name === BodyPart.id) {
+            if(injury.value === 1) { BodyPart.color = '#7f1d1d' }
+            else if(injury.value === 2) { BodyPart.color = '#b91c1c' }
+            else if(injury.value === 3) { BodyPart.color = '#dc2626' }
+            else if(injury.value === 4) { BodyPart.color = '#ea580c' }
+            else if(injury.value === 5) { BodyPart.color = '#fb923c' }
+            else if(injury.value === 6) { BodyPart.color = '#fbbf24' }
+            else if(injury.value === 7) { BodyPart.color = '#84cc16' }
+            else if(injury.value === 8) { BodyPart.color = '#65a30d' }
+            else if(injury.value === 9) { BodyPart.color = '#16a34a' }
+            else if(injury.value === 10) { BodyPart.color = '#166534' }
+        }
+    });
+})
+bodyFrontRight.forEach(BodyPart => {
+    props.injuries.forEach(injury => {
+        if (injury.body_part_name === BodyPart.id) {
+            if(injury.value === 1) { BodyPart.color = '#7f1d1d' }
+            else if(injury.value === 2) { BodyPart.color = '#b91c1c' }
+            else if(injury.value === 3) { BodyPart.color = '#dc2626' }
+            else if(injury.value === 4) { BodyPart.color = '#ea580c' }
+            else if(injury.value === 5) { BodyPart.color = '#fb923c' }
+            else if(injury.value === 6) { BodyPart.color = '#fbbf24' }
+            else if(injury.value === 7) { BodyPart.color = '#84cc16' }
+            else if(injury.value === 8) { BodyPart.color = '#65a30d' }
+            else if(injury.value === 9) { BodyPart.color = '#16a34a' }
+            else if(injury.value === 10) { BodyPart.color = '#166534' }
+        }
+    });
+})
+
+onMounted(() => {
+    bodyFrontLeft.forEach(BodyPart => {
+        const svg = document.getElementById(BodyPart.id);
+        svg.setAttribute('fill', BodyPart.color);
+    });
+
+    bodyFrontRight.forEach(BodyPart => {
+        const svg = document.getElementById(BodyPart.id);
+        svg.setAttribute('fill', BodyPart.color);
+    });
+
+});
+
 
 // Fonction permettant de récupérer l'id de la partie du corp cliqué et d'afficher la pop-up pour selectionner le niveau de douleur
 function showInjuryBox(svgId){
