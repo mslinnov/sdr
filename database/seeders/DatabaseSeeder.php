@@ -91,6 +91,8 @@ class DatabaseSeeder extends Seeder
             'element_type_id' => 1,
             'image' => 'sleeping_emoji.png',
             'title' => 'Comment juges-tu la qualité de ton sommeil sur les 7 derniers jours ?',
+            'legend_1' => 'Très mal dormis',
+            'legend_10' => 'Très bien dormis',
         ]);
         surveyElement::factory()->create([
             'survey_id' => 1,
@@ -104,6 +106,8 @@ class DatabaseSeeder extends Seeder
             'element_type_id' => 1,
             'image' => 'tired_emoji.png',
             'title' => 'Comment juges-tu ta fatigue sur les 7 derniers jours ?',
+            'legend_1' => 'Très fatigué',
+            'legend_10' => 'Pas du tout fatigué',
         ]);
         surveyElement::factory()->create([
             'survey_id' => 1,
@@ -117,6 +121,8 @@ class DatabaseSeeder extends Seeder
             'element_type_id' => 1,
             'image' => 'smile_emoji.png',
             'title' => 'Comment juges-tu ton humeur sur les 7 derniers jours ?',
+            'legend_1' => 'Mauvaise humeur',
+            'legend_10' => 'Très bonne humeur',
         ]);
         surveyElement::factory()->create([
             'survey_id' => 1,
@@ -130,6 +136,7 @@ class DatabaseSeeder extends Seeder
             'element_type_id' => 2,
             'image' => 'injured_emoji.png',
             'title' => 'Ressens-tu des douleurs (courbatures, jambes lourdes) sur ces 7 derniers jours ?',
+            'placeholder' => 'Non'
         ]);
         surveyElement::factory()->create([
             'survey_id' => 1,
@@ -143,6 +150,8 @@ class DatabaseSeeder extends Seeder
             'element_type_id' => 1,
             'image' => 'arm_emoji.png',
             'title' => 'Comment juges-tu l\'intensité des séances sur ces 7 derniers jours ?',
+            'legend_1' => 'Facile',
+            'legend_10' => 'Très difficile',
         ]);
         surveyElement::factory()->create([
             'survey_id' => 1,
@@ -165,6 +174,8 @@ class DatabaseSeeder extends Seeder
             'element_type_id' => 1,
             'image' => 'soccer_ball_emoji.png',
             'title' => 'Donne-toi une note sur le dernier match',
+            'legend_1' => 'Mauvais match',
+            'legend_10' => 'Excellent match',
         ]);
         surveyElement::factory()->create([
             'survey_id' => 2,
@@ -177,6 +188,8 @@ class DatabaseSeeder extends Seeder
             'element_type_id' => 1,
             'image' => 'monocle_emoji.png',
             'title' => 'Évalue ta compréhension des consignes de ton coach',
+            'legend_1' => 'Mauvaise compréhension',
+            'legend_10' => 'Très bonne compréhension',
         ]);
         surveyElement::factory()->create([
             'survey_id' => 2,
@@ -189,6 +202,8 @@ class DatabaseSeeder extends Seeder
             'element_type_id' => 1,
             'image' => 'stadium_emoji.png',
             'title' => 'Évalue la relation avec tes cohéquipiers sur le terrain',
+            'legend_1' => 'Mauvaise relation',
+            'legend_10' => 'Très bonne relation',
         ]);
         surveyElement::factory()->create([
             'survey_id' => 2,
@@ -201,6 +216,7 @@ class DatabaseSeeder extends Seeder
             'element_type_id' => 2,
             'image' => 'star_eyes_emoji.png',
             'title' => 'Évalue la relation avec tes cohéquipiers en dehors du terrain',
+            'placeholder' => ''
         ]);
         surveyElement::factory()->create([
             'survey_id' => 2,
@@ -224,6 +240,8 @@ class DatabaseSeeder extends Seeder
             'element_type_id' => 1,
             'image' => 'house_emoji.png',
             'title' => 'Note ton cadre de vie',
+            'legend_1' => 'Mauvais',
+            'legend_10' => 'Idéale',
         ]);
         surveyElement::factory()->create([
             'survey_id' => 3,
@@ -236,6 +254,8 @@ class DatabaseSeeder extends Seeder
             'element_type_id' => 1,
             'image' => 'love_emoji.png',
             'title' => 'Comment se sentent tes proches ?',
+            'legend_1' => 'Pas bien',
+            'legend_10' => 'Très bien',
         ]);
         surveyElement::factory()->create([
             'survey_id' => 3,
@@ -248,6 +268,8 @@ class DatabaseSeeder extends Seeder
             'element_type_id' => 1,
             'image' => 'stress_emoji.png',
             'title' => 'Note ton niveau de stress',
+            'legend_1' => 'Très stressé',
+            'legend_10' => 'Pas du tout stressé',
         ]);
         surveyElement::factory()->create([
             'survey_id' => 3,
@@ -258,8 +280,10 @@ class DatabaseSeeder extends Seeder
         ]);
         SurveyInput::factory()->create([
             'element_type_id' => 1,
-            'image' => 'stress_emoji.png',
-            'title' => 'Note ton niveau appétit',
+            'image' => 'tongue_emoji.png',
+            'title' => 'Note ton niveau d\'appétit',
+            'legend_1' => 'Pas faim',
+            'legend_10' => 'Très faim',
         ]);
         surveyElement::factory()->create([
             'survey_id' => 3,
@@ -272,6 +296,7 @@ class DatabaseSeeder extends Seeder
             'element_type_id' => 2,
             'image' => 'chat_bubble_emoji.png',
             'title' => 'Une remarque à nous faire part ou un évènement important à mentionner ?',
+            'placeholder' => 'Rien à signaler'
         ]);
         SurveyElement::factory()->create([
             'survey_id' => 3,

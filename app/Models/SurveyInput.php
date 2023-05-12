@@ -16,7 +16,7 @@ class SurveyInput extends Model
      * @var array<int, string>
      */
     protected $fillable = [
-        'element_type_id', 'image', 'title'
+        'element_type_id', 'image', 'title', 'legend_1', 'legend_10', 'placeholder'
     ];
 
 

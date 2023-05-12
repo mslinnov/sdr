@@ -13,7 +13,7 @@
                 <SurveyElementBox class="mt-8">
                     <template #image><img :src="'/image/icon/'+surveyElement.survey_input.image" class="img-survey-create"></template>
                     <template #title><div class="dark:text-white text-gray-500 font-medium text-sm text-center">{{surveyElement.survey_input.title}} </div></template>
-                    <div v-if="surveyElement.element_type_id === 1" class="flex flex-row justify-center pt-3">
+                    <div v-if="surveyElement.element_type_id === 1" class="flex flex-row justify-evenly	 pt-3">
                         <div v-for="n in 10">
                             <input type="radio" :required="true"
                                    :id="'id_'+surveyElement.id+'_'+n"
@@ -32,14 +32,18 @@
                                         {{n}}
                                     </div>
                                 </label>
-                            <br>
                         </div>
+                    </div>
+                    <div v-if="surveyElement.element_type_id === 1"  class="w-full flex justify-between pt-1">
+                        <div class="surveyLegend">{{surveyElement.survey_input.legend_1}}</div>
+                        <div class="surveyLegend">{{surveyElement.survey_input.legend_10}}</div>
                     </div>
                     <div v-if="surveyElement.element_type_id === 2">
                         <input type="text"
                                :id="'id_'+surveyElement.id"
                                v-model="form[surveyElement.formid]"
                                class="form-input mt-4"
+                               :placeholder="surveyElement.survey_input.placeholder"
                                required>
                     </div>
                 </SurveyElementBox>
@@ -77,7 +81,12 @@ function resetFormElement() {
         let surveyElementName = 'responseSurveyElement_'+surveyElement.id
         // Je rajouter un element formid au survey element courrant avec le nom du survey element à l'intérieur
         surveyElement['formid'] = surveyElementName
-        formElement[surveyElementName] = null
+        if(surveyElement.element_type_id === 2 && surveyElement.survey_input.placeholder ){
+            formElement[surveyElementName] = surveyElement.survey_input.placeholder
+        }
+        else{
+            formElement[surveyElementName] = null
+        }
     }
     formElement['surveyId'] = props.survey.id
 }
@@ -90,6 +99,7 @@ const formSubmit = reactive({
 
 // Initialisation du formulaire pour récupérer les infos saisi par le joueur
 const form = reactive(useForm(formElement));
+console.log("Form : ", form)
 
 // Vérification que tous les champs sont remplis avant d'envoyer le formulaire
 const isFormValid = () => {

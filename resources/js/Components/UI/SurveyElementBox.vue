@@ -5,7 +5,7 @@
             <slot name="image"></slot>
         </div>
 
-        <div class=" flex-1">
+        <div class=" flex-1 w-full">
             <slot name="title"></slot>
             <slot></slot>
         </div>

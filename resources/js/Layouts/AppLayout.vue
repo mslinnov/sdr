@@ -15,11 +15,11 @@
                     <span v-show="unreadNotificationsCount>0" class="notification-count-badge">{{ unreadNotificationsCount[0] }}</span>
                 </Link>
                 <div class="flex flex-col items-center">
-                    <img :src="'image/sdr.png'" class="w-5">
+                    <img :src="'/image/sdr.png'" class="w-5">
                     <h1 class="text-red-600 font-bold w-full text-center">Loan Player</h1>
                 </div>
                 <div class="flex gap-2 align-middle items-center h-16">
-                    <div class="text-red-600 font-bold pr-2">{{user.first_name}} {{user.last_name}}</div>
+                    <div class="text-red-600 text-sm font-bold pr-2">{{user.first_name}} {{user.last_name}}</div>
                     <img :src="user.image[0].src" v-if="user.image[0]"
                          alt="Photo de profil de joueur"
                          class="rounded-full aspect-square w-16 object-cover object-top	">

@@ -15,6 +15,9 @@ return new class extends Migration
     {
         Schema::create('survey_inputs', function (Blueprint $table) {
             $table->id();
+            $table->string('legend_1')->nullable();
+            $table->string('legend_10')->nullable();
+            $table->string('placeholder')->nullable();
             $table->string('image');
             $table->string('title');
             $table->timestamps();
