@@ -13,7 +13,7 @@
             Sélectionne la partie du corps douloureuse
         </div>
 
-        <div v-if="formInjury.bodyFront" id="body_map_front" class="flex justify-center py-6">
+        <div v-show="formInjury.bodyFront" id="body_map_front" class="flex justify-center py-6">
             <svg xmlns="http://www.w3.org/2000/svg" width="177.933" height="475.747" viewBox="0 0 177.933 475.747">
                 <g id="group_body_front" data-name="Body Front" transform="translate(20.027 7.387)">
                     <g id="Avant_Gauche" data-name="Avant Gauche" transform="translate(-19.548 -6.319)">
@@ -59,35 +59,35 @@
                 </g>
             </svg>
         </div>
-        <div v-else id="body_map_back" class="flex justify-center py-6">
+        <div v-show="!formInjury.bodyFront" id="body_map_back" class="flex justify-center py-6">
             <svg xmlns="http://www.w3.org/2000/svg" width="181.608" height="474.984" viewBox="0 0 181.608 474.984">
                 <g id="group_body_back" data-name="Body Back" transform="translate(24.537 132.131)">
-                    <g id="Arrière_Gauche" data-name="Arrière Gauche" transform="translate(-24.058 -131.527)">
-                        <path @click="showInjuryBox('Arrière_Tete_Gauche')" id="Arrière_Tete_Gauche" data-name="Arrière Tete Gauche" d="M10449.282,5402.916c1.461,1.453.585,47.694,0,48.729s-4.942,3.6-6.977,4.6-5.86,1.785-6.635,1.224-1.371-3.026-1.065-4.971a18.8,18.8,0,0,0-.366-5.909,11.3,11.3,0,0,0-2.277-5.486c-1.2-1.4-3.329-1.934-3.917-3.507s-1.024-4.018,0-4.409,1.516.692,2.133,0-.511-9.156-.452-11.518,1.372-8.276,3.156-10.449a31.32,31.32,0,0,1,7.366-6.022C10442.43,5403.943,10447.822,5401.462,10449.282,5402.916Z" transform="translate(-10361.424 -5402.473)" fill="#c4c4c4" stroke="#141313" stroke-width="1"/>
+                    <g id="Arriere_Gauche" data-name="Arriere Gauche" transform="translate(-24.058 -131.527)">
+                        <path @click="showInjuryBox('Arriere_Tete_Gauche')" id="Arriere_Tete_Gauche" data-name="Arriere Tete Gauche" d="M10449.282,5402.916c1.461,1.453.585,47.694,0,48.729s-4.942,3.6-6.977,4.6-5.86,1.785-6.635,1.224-1.371-3.026-1.065-4.971a18.8,18.8,0,0,0-.366-5.909,11.3,11.3,0,0,0-2.277-5.486c-1.2-1.4-3.329-1.934-3.917-3.507s-1.024-4.018,0-4.409,1.516.692,2.133,0-.511-9.156-.452-11.518,1.372-8.276,3.156-10.449a31.32,31.32,0,0,1,7.366-6.022C10442.43,5403.943,10447.822,5401.462,10449.282,5402.916Z" transform="translate(-10361.424 -5402.473)" fill="#c4c4c4" stroke="#141313" stroke-width="1"/>
                         <path @click="showInjuryBox('Cervicale_Gauche')" id="Cervicale_Gauche" data-name="Cervicale Gauche" d="M10459.992,5543.988a12.152,12.152,0,0,0-4.979,2.553c-2.11,1.583-5.214,1.237-6.4,3.165s-1.825,4.967-1.473,5.458,13.662.2,14.393-.61.1-8.761,0-9.516S10461.622,5543.613,10459.992,5543.988Z" transform="translate(-10373.399 -5488.81)" fill="#c4c4c4" stroke="#141313" stroke-width="1"/>
-                        <path @click="showInjuryBox('Arrière_Epaule_Gauche')" id="Arrière_Epaule_Gauche" data-name="Arrière Epaule Gauche" d="M9723.8,5579s12.628-2.068,15.192,0c.779,3.329-.49,10.865-.632,11.344-.238.8-7.993-.2-14.073,0a69.919,69.919,0,0,0-12.754,1.553c-4.542.8-7.2,1.482-9.458,2.673s-2.522,1.189-5.364,4.734-3.111,5.742-4.309,10.189-1.132,6.281-1.766,9.788a73.773,73.773,0,0,0-.792,9.525c-.1,2.1.1,6.627-.531,7.132s-20.408,7.6-20.408,7.6a27.418,27.418,0,0,1-1.135-5.042,66.13,66.13,0,0,1-.95-7.247,48.755,48.755,0,0,1,0-8.334,45.042,45.042,0,0,1,.95-8.553c.771-4.013.335-3.416,2.131-7.5s1.623-5.229,5.053-8.834,4.008-3.556,8.658-5.592,4.907-1.328,9.942-2.557a70.55,70.55,0,0,0,9.369-3.044l13.217-4.905Z" transform="translate(-9651.363 -5509.689)" fill="#c4c4c4" stroke="#141313" stroke-width="1"/>
+                        <path @click="showInjuryBox('Arriere_Epaule_Gauche')" id="Arrière_Epaule_Gauche" data-name="Arrière Epaule Gauche" d="M9723.8,5579s12.628-2.068,15.192,0c.779,3.329-.49,10.865-.632,11.344-.238.8-7.993-.2-14.073,0a69.919,69.919,0,0,0-12.754,1.553c-4.542.8-7.2,1.482-9.458,2.673s-2.522,1.189-5.364,4.734-3.111,5.742-4.309,10.189-1.132,6.281-1.766,9.788a73.773,73.773,0,0,0-.792,9.525c-.1,2.1.1,6.627-.531,7.132s-20.408,7.6-20.408,7.6a27.418,27.418,0,0,1-1.135-5.042,66.13,66.13,0,0,1-.95-7.247,48.755,48.755,0,0,1,0-8.334,45.042,45.042,0,0,1,.95-8.553c.771-4.013.335-3.416,2.131-7.5s1.623-5.229,5.053-8.834,4.008-3.556,8.658-5.592,4.907-1.328,9.942-2.557a70.55,70.55,0,0,0,9.369-3.044l13.217-4.905Z" transform="translate(-9651.363 -5509.689)" fill="#c4c4c4" stroke="#141313" stroke-width="1"/>
                         <path @click="showInjuryBox('Dos_Gauche')" id="Dos_Gauche" data-name="Dos Gauche" d="M10408.726,5616.3c1.553,2.167.792,31.419.792,31.419s1.486,39.208,0,40.749-16.516,5.248-19.516,6.013-9.6,5.018-14.733,6.354-6.6,1.737-7.577,0-1.361-16.351-1.285-19.7-1.576-9.388-1.8-12.264-1.678-7.546-1.923-10.595-.479-11.739,0-13.632,1.125-6.234,1.923-9.11,1.233-8.017,3.085-9.845,6.084-6.365,10.018-7.35a105.767,105.767,0,0,1,15.356-2.041C10395.042,5616.334,10407.175,5614.135,10408.726,5616.3Z" transform="translate(-10321.722 -5532.833)" fill="#c4c4c4" stroke="#141313" stroke-width="1"/>
-                        <path @click="showInjuryBox('Arrière_Biceps_Gauche')" id="Arrière_Biceps_Gauche" data-name="Arrière Biceps Gauche" d="M10318.032,5741.941c1.747,1.585.329,6.284.775,10.05a61.777,61.777,0,0,0,1.835,9.041,41.946,41.946,0,0,1,1.065,10c-.205,2.371-1,6.217-2.9,6.283s-5.628-1.625-7.5-2.167-7.718-1.6-10.856-2.1-5.362-.139-4.939-4.171,2.282-7.1,2.777-9.222c.7-2.985-.131-9.537,1.815-11.572S10316.285,5740.356,10318.032,5741.941Z" transform="translate(-10280.847 -5609.568)" fill="#c4c4c4" stroke="#141313" stroke-width="1"/>
-                        <path @click="showInjuryBox('Arrière_Coude_Gauche')" id="Arrière_Coude_Gauche" data-name="Arrière Coude Gauche" d="M10284,5834.144c-1.1,1.862-3.2,11.273-3.2,11.273s-.874,2.268,1.058,3.4,21.415,2.473,22.562,1.755c1.053-.659,0-4.154,1.027-6.884s4.087-5.853,3.2-7.417-2.9-1.98-5.582-2.125-12.008-.99-13.875-1.155S10285.095,5832.282,10284,5834.144Z" transform="translate(-10271.778 -5665.202)" fill="#c4c4c4" stroke="#141313" stroke-width="1"/>
-                        <path @click="showInjuryBox('Arrière_Avant')" id="Arrière_Avant-Bras_Gauche" data-name="Arrière Avant-Bras Gauche" d="M10269.878,5885.769c-1.8.941-1.767,1.528-2.828,8.162a160.531,160.531,0,0,0-1.369,18.8c-.044,2.567-1.361,19.929-1.478,22.209s1.556,2.3,2.847,2.3,9.457,1.357,11.144-.517,7-14.505,8.356-18.284,4.161-12.859,4.756-15.634,2.8-10.218,2.989-13.1-.6-3.521-2.339-3.939S10271.673,5884.828,10269.878,5885.769Z" transform="translate(-10261.762 -5697.228)" fill="#c4c4c4" stroke="#141313" stroke-width="1"/>
-                        <path @click="showInjuryBox('Arrière_Poignet_Gauche')" id="Arrière_Poignet_Gauche" data-name="Arrière Poignet Gauche" d="M10261.6,6028.636c-1.312,1.069-2.082,6.736-1.408,8.259s11.362,1.934,12.646.953,2.6-6.215,2.053-7.557-4.32-2.189-5.96-2.189S10262.911,6027.566,10261.6,6028.636Z" transform="translate(-10259.161 -5784.369)" fill="#c4c4c4" stroke="#141313" stroke-width="1"/>
-                        <path @click="showInjuryBox('Arrière_Main_Gauche')" id="Arrière_Main_Gauche" data-name="Arrière Main Gauche" d="M9631.662,6059.486c-.893.831-1.966,5.688-1.966,8.12s-.549,9.612,0,12.464.91,6.293,1.966,8.192a41.367,41.367,0,0,0,5.47,6.809,10.675,10.675,0,0,0,4.157,2.841c1.789.7,5.941,1.376,6.418.466a2.366,2.366,0,0,0,0-2.314c-.322-.534-1.941-.952-3.274-.992s-3.046-1.619-3.984-2.308-2.306-3.36-2.735-4.227-1.591-3.318-1.464-4.732.267-3.326.883-4.047,2.791-1.445,3.316-.8a8.894,8.894,0,0,1,.841,3.3,23.7,23.7,0,0,0,.68,3.477c.451,1.647.4,1.745,1.653,2.8s1.57.563,2.062-.275.271-3.352,0-5.332a53.021,53.021,0,0,1-1-6.71c-.089-2.713.189-6.981,0-8.614s-.251-5.489-1.058-7.135-2.956-1.845-4.776-1.977S9632.552,6058.654,9631.662,6059.486Z" transform="translate(-9629.452 -5802.903)" fill="#c4c4c4" stroke="#141313" stroke-width="1"/>
+                        <path @click="showInjuryBox('Arriere_Biceps_Gauche')" id="Arrière_Biceps_Gauche" data-name="Arrière Biceps Gauche" d="M10318.032,5741.941c1.747,1.585.329,6.284.775,10.05a61.777,61.777,0,0,0,1.835,9.041,41.946,41.946,0,0,1,1.065,10c-.205,2.371-1,6.217-2.9,6.283s-5.628-1.625-7.5-2.167-7.718-1.6-10.856-2.1-5.362-.139-4.939-4.171,2.282-7.1,2.777-9.222c.7-2.985-.131-9.537,1.815-11.572S10316.285,5740.356,10318.032,5741.941Z" transform="translate(-10280.847 -5609.568)" fill="#c4c4c4" stroke="#141313" stroke-width="1"/>
+                        <path @click="showInjuryBox('Arriere_Coude_Gauche')" id="Arrière_Coude_Gauche" data-name="Arrière Coude Gauche" d="M10284,5834.144c-1.1,1.862-3.2,11.273-3.2,11.273s-.874,2.268,1.058,3.4,21.415,2.473,22.562,1.755c1.053-.659,0-4.154,1.027-6.884s4.087-5.853,3.2-7.417-2.9-1.98-5.582-2.125-12.008-.99-13.875-1.155S10285.095,5832.282,10284,5834.144Z" transform="translate(-10271.778 -5665.202)" fill="#c4c4c4" stroke="#141313" stroke-width="1"/>
+                        <path @click="showInjuryBox('Arriere_Avant_Bras_Gauche')" id="Arrière_Avant_Bras_Gauche" data-name="Arrière Avant-Bras Gauche" d="M10269.878,5885.769c-1.8.941-1.767,1.528-2.828,8.162a160.531,160.531,0,0,0-1.369,18.8c-.044,2.567-1.361,19.929-1.478,22.209s1.556,2.3,2.847,2.3,9.457,1.357,11.144-.517,7-14.505,8.356-18.284,4.161-12.859,4.756-15.634,2.8-10.218,2.989-13.1-.6-3.521-2.339-3.939S10271.673,5884.828,10269.878,5885.769Z" transform="translate(-10261.762 -5697.228)" fill="#c4c4c4" stroke="#141313" stroke-width="1"/>
+                        <path @click="showInjuryBox('Arriere_Poignet_Gauche')" id="Arrière_Poignet_Gauche" data-name="Arrière Poignet Gauche" d="M10261.6,6028.636c-1.312,1.069-2.082,6.736-1.408,8.259s11.362,1.934,12.646.953,2.6-6.215,2.053-7.557-4.32-2.189-5.96-2.189S10262.911,6027.566,10261.6,6028.636Z" transform="translate(-10259.161 -5784.369)" fill="#c4c4c4" stroke="#141313" stroke-width="1"/>
+                        <path @click="showInjuryBox('Arriere_Main_Gauche')" id="Arrière_Main_Gauche" data-name="Arrière Main Gauche" d="M9631.662,6059.486c-.893.831-1.966,5.688-1.966,8.12s-.549,9.612,0,12.464.91,6.293,1.966,8.192a41.367,41.367,0,0,0,5.47,6.809,10.675,10.675,0,0,0,4.157,2.841c1.789.7,5.941,1.376,6.418.466a2.366,2.366,0,0,0,0-2.314c-.322-.534-1.941-.952-3.274-.992s-3.046-1.619-3.984-2.308-2.306-3.36-2.735-4.227-1.591-3.318-1.464-4.732.267-3.326.883-4.047,2.791-1.445,3.316-.8a8.894,8.894,0,0,1,.841,3.3,23.7,23.7,0,0,0,.68,3.477c.451,1.647.4,1.745,1.653,2.8s1.57.563,2.062-.275.271-3.352,0-5.332a53.021,53.021,0,0,1-1-6.71c-.089-2.713.189-6.981,0-8.614s-.251-5.489-1.058-7.135-2.956-1.845-4.776-1.977S9632.552,6058.654,9631.662,6059.486Z" transform="translate(-9629.452 -5802.903)" fill="#c4c4c4" stroke="#141313" stroke-width="1"/>
                         <path @click="showInjuryBox('Lombaire_Gauche')" id="Lombaire_Gauche" data-name="Lombaire Gauche" d="M10385.726,5837.2c-.1,2.374,1.38,13.824,1.521,17.528s-2.247,17.205-1.731,19.584.476,3.329,3.339,3.023,10.081-5.979,14.531-5.826,11.483,5.665,12.916,6.8,3.579,3.506,6,2.885,2.66-.253,2.334-5.137-1.181-26.384-1.139-30.119,1.526-25.291,1.139-26.613-.573-4.349-2.334-3.808-14.519,3.54-17.332,4.864-14.679,6.423-17.465,7.519S10385.827,5834.828,10385.726,5837.2Z" transform="translate(-10335.787 -5654.621)" fill="#c4c4c4" stroke="#141313" stroke-width="1"/>
                         <path @click="showInjuryBox('Fessier_Gauche')" id="Fessier_Gauche" data-name="Fessier Gauche" d="M10381.188,5980.227c-.672,2.637-.466,9.6-.8,12.821s-.953,10.266,0,11.089,15.668,8.854,19.061,9.11a24.4,24.4,0,0,0,11.554-2.378c2.936-1.62,8.663-1.933,9.09-4.152s.837-23.856.286-25.738-2.316-3.922-5.486-5.482-11.034-8.277-14.592-7.687-8.877,3.867-10.773,4.552a38.5,38.5,0,0,0-6.123,2.315C10381.349,5975.817,10381.859,5977.591,10381.188,5980.227Z" transform="translate(-10332.395 -5747.618)" fill="#c4c4c4" stroke="#141313" stroke-width="1"/>
-                        <path @click="showInjuryBox('Arrière_Adducteur_Gauche')" id="Arrière_Adducteur_Gauche" data-name="Arrière Adducteur Gauche" d="M10445.715,6089.508c-.7,2.537,1.323,8.3,2.331,12.084s4.281,14.783,5.074,18.33.813,4.586,1.97,5.283,2.935.638,2.989-3.746.271-9.912,1.071-13.116,1.585-12.983,1.585-16.659,1.467-6.445,0-7.458-4.731.208-8.488,1.541S10446.413,6086.971,10445.715,6089.508Z" transform="translate(-10372.499 -5818.491)" fill="#c4c4c4" stroke="#141313" stroke-width="1"/>
+                        <path @click="showInjuryBox('Arriere_Adducteur_Gauche')" id="Arrière_Adducteur_Gauche" data-name="Arrière Adducteur Gauche" d="M10445.715,6089.508c-.7,2.537,1.323,8.3,2.331,12.084s4.281,14.783,5.074,18.33.813,4.586,1.97,5.283,2.935.638,2.989-3.746.271-9.912,1.071-13.116,1.585-12.983,1.585-16.659,1.467-6.445,0-7.458-4.731.208-8.488,1.541S10446.413,6086.971,10445.715,6089.508Z" transform="translate(-10372.499 -5818.491)" fill="#c4c4c4" stroke="#141313" stroke-width="1"/>
                         <path @click="showInjuryBox('Ischios_Gauche')" id="Ischios_Gauche" data-name="Ischios Gauche" d="M10367.839,6076.5s-1.487,13.081-1.487,16.883-.4,20.855.627,25.076,2.174,17.286,2.374,21.548,1.672,8.85,1.672,9.409.932,3.051,2.791,3.051,25.083,1.323,26.883,0,1.708-4.88,2.021-7.115,1.927-9.119,2.435-11.742,1.54-6.177.68-8.96-4.713-15.02-5.853-17.546-3.814-18.17-6.687-21.354-7.277-7.588-11.621-9.25-8.079-4.946-10.648-4.676S10367.839,6076.5,10367.839,6076.5Z" transform="translate(-10324.086 -5811.133)" fill="#c4c4c4" stroke="#141313" stroke-width="1"/>
-                        <path @click="showInjuryBox('Arrière_Genou_Gauche')" id="Arrière_Genou_Gauche" data-name="Arrière Genou Gauche" d="M10382.128,6285.876c-1.2,1.925-.139,5.686,0,8.958s.627,7.9,0,10.581-1.671,4.353-.63,5.379,23.632.9,24.751.718,2.229-2.583,2.557-3.588.066-5.771.313-7,.464-2.946.748-5.1,2.008-8.935.816-9.939S10383.324,6283.952,10382.128,6285.876Z" transform="translate(-10333.109 -5941.149)" fill="#c4c4c4" stroke="#141313" stroke-width="1"/>
-                        <path @click="showInjuryBox('Arrière_Mollet_Gauche')" id="Arrière_Mollet_Gauche" data-name="Arrière Mollet Gauche" d="M10374.571,6361.872c-1.761,3.824-1.594,7.714-1.644,11.9s-.187,6.316,0,12.413-.159,7.073,1.644,12.191.705,7.1,3.114,7.977,21.839,2.21,23.843,0,4.173-9.727,4.173-15.058.677-13.389,0-18.107-1.479-10.386-1.978-12.229-.691-3.6-3.908-3.788-18.337.428-20.774.719S10376.33,6358.048,10374.571,6361.872Z" transform="translate(-10328.088 -5985.342)" fill="#c4c4c4" stroke="#141313" stroke-width="1"/>
+                        <path @click="showInjuryBox('Arriere_Genou_Gauche')" id="Arrière_Genou_Gauche" data-name="Arrière Genou Gauche" d="M10382.128,6285.876c-1.2,1.925-.139,5.686,0,8.958s.627,7.9,0,10.581-1.671,4.353-.63,5.379,23.632.9,24.751.718,2.229-2.583,2.557-3.588.066-5.771.313-7,.464-2.946.748-5.1,2.008-8.935.816-9.939S10383.324,6283.952,10382.128,6285.876Z" transform="translate(-10333.109 -5941.149)" fill="#c4c4c4" stroke="#141313" stroke-width="1"/>
+                        <path @click="showInjuryBox('Arriere_Mollet_Gauche')" id="Arrière_Mollet_Gauche" data-name="Arrière Mollet Gauche" d="M10374.571,6361.872c-1.761,3.824-1.594,7.714-1.644,11.9s-.187,6.316,0,12.413-.159,7.073,1.644,12.191.705,7.1,3.114,7.977,21.839,2.21,23.843,0,4.173-9.727,4.173-15.058.677-13.389,0-18.107-1.479-10.386-1.978-12.229-.691-3.6-3.908-3.788-18.337.428-20.774.719S10376.33,6358.048,10374.571,6361.872Z" transform="translate(-10328.088 -5985.342)" fill="#c4c4c4" stroke="#141313" stroke-width="1"/>
                         <path @click="showInjuryBox('Talon_Gauche')" id="Talon_Gauche" data-name="Talon Gauche" d="M10385.873,6492.357c-1.843,1.424.021,3.16.992,6.955a45.91,45.91,0,0,1,1.456,8.064c.262,2.57.968,6.359,1.1,8.225a38.233,38.233,0,0,1,0,5.182,40.135,40.135,0,0,1-1.1,7.133c-.617,2.462-1.971,4.8-2.448,7.081s-.754,4.256,0,5.517c.374.626,6.465-.01,12.721,0,6.132.009,12.43.656,12.8,0a6.427,6.427,0,0,0,0-5.517c-.921-1.876-3.346-4.9-4.143-7.081a31.479,31.479,0,0,1-1.656-7.133c-.409-3.027-1.46-8.9-.8-11.505s1.047-7.846,1.774-9.966,2.583-4.994,1.368-6.252-6.549-1.586-9.338-1.361S10387.716,6490.933,10385.873,6492.357Z" transform="translate(-10335.573 -6067.423)" fill="#c4c4c4" stroke="#141313" stroke-width="1"/>
                     </g>
-                    <g id="Arrière_Droit" data-name="Arrière Droit" transform="translate(67.628 -130.978)">
-                        <path @click="showInjuryBox('Arrière_Tete_Droit')" id="Arrière_Tete_Droit" data-name="Arrière Tete Droit" d="M10428.226,5402.916c-1.46,1.453-.582,47.694,0,48.729s4.943,3.6,6.977,4.6,5.862,1.785,6.637,1.224,1.37-3.026,1.063-4.971a18.892,18.892,0,0,1,.367-5.909,11.283,11.283,0,0,1,2.276-5.486c1.2-1.4,3.332-1.934,3.92-3.507s1.024-4.018,0-4.409-1.52.692-2.138,0,.514-9.156.456-11.518-1.374-8.276-3.154-10.449a31.382,31.382,0,0,0-7.371-6.022C10435.078,5403.943,10429.685,5401.462,10428.226,5402.916Z" transform="translate(-10427.126 -5402.473)" fill="#c4c4c4" stroke="#141313" stroke-width="1"/>
+                    <g id="Arriere_Droit" data-name="Arriere Droit" transform="translate(67.628 -130.978)">
+                        <path @click="showInjuryBox('Arriere_Tete_Droit')" id="Arriere_Tete_Droit" data-name="Arrière Tete Droit" d="M10428.226,5402.916c-1.46,1.453-.582,47.694,0,48.729s4.943,3.6,6.977,4.6,5.862,1.785,6.637,1.224,1.37-3.026,1.063-4.971a18.892,18.892,0,0,1,.367-5.909,11.283,11.283,0,0,1,2.276-5.486c1.2-1.4,3.332-1.934,3.92-3.507s1.024-4.018,0-4.409-1.52.692-2.138,0,.514-9.156.456-11.518-1.374-8.276-3.154-10.449a31.382,31.382,0,0,0-7.371-6.022C10435.078,5403.943,10429.685,5401.462,10428.226,5402.916Z" transform="translate(-10427.126 -5402.473)" fill="#c4c4c4" stroke="#141313" stroke-width="1"/>
                         <path @click="showInjuryBox('Cervicale_Droit')" id="Cervicale_Droit" data-name="Cervicale Droit" d="M10448.934,5543.988a12.144,12.144,0,0,1,4.977,2.553c2.111,1.583,5.216,1.237,6.4,3.165s1.827,4.967,1.474,5.458-13.661.2-14.394-.61-.1-8.761,0-9.516S10447.3,5543.613,10448.934,5543.988Z" transform="translate(-10446.564 -5488.81)" fill="#c4c4c4" stroke="#141313" stroke-width="1"/>
                         <path @click="showInjuryBox('Arrière_Epaule_Droit')" id="Arrière_Epaule_Droit" data-name="Arrière Epaule Droit" d="M9682.084,5579s-12.628-2.068-15.193,0c-.777,3.329.49,10.865.634,11.344.235.8,7.99-.2,14.072,0a69.964,69.964,0,0,1,12.756,1.553c4.539.8,7.2,1.482,9.456,2.673s2.522,1.189,5.366,4.734,3.107,5.742,4.307,10.189,1.131,6.281,1.765,9.788a73.8,73.8,0,0,1,.793,9.525c.1,2.1-.1,6.627.533,7.132s20.407,7.6,20.407,7.6a27.535,27.535,0,0,0,1.133-5.042,65.628,65.628,0,0,0,.952-7.247,48.956,48.956,0,0,0,0-8.334,44.962,44.962,0,0,0-.952-8.553c-.77-4.013-.336-3.416-2.13-7.5s-1.623-5.229-5.052-8.834-4.01-3.556-8.662-5.592-4.906-1.328-9.94-2.557a70.55,70.55,0,0,1-9.369-3.044l-13.217-4.905Z" transform="translate(-9665.558 -5509.689)" fill="#c4c4c4" stroke="#141313" stroke-width="1"/>
                         <path @click="showInjuryBox('Dos_Droit')" id="Dos_Droit" data-name="Dos Droit" d="M10363.858,5616.3c-1.552,2.167-.79,31.419-.79,31.419s-1.487,39.208,0,40.749,16.515,5.248,19.516,6.013,9.6,5.018,14.732,6.354,6.6,1.737,7.578,0,1.36-16.351,1.284-19.7,1.577-9.388,1.8-12.264,1.677-7.546,1.921-10.595.481-11.739,0-13.632-1.125-6.234-1.921-9.11-1.233-8.017-3.085-9.845-6.083-6.365-10.019-7.35a105.767,105.767,0,0,0-15.356-2.041C10377.544,5616.334,10365.41,5614.135,10363.858,5616.3Z" transform="translate(-10361.903 -5532.833)" fill="#c4c4c4" stroke="#141313" stroke-width="1"/>
                         <path @click="showInjuryBox('Arrière_Biceps_Droit')" id="Arrière_Biceps_Droit" data-name="Arrière Biceps Droit" d="M10299.171,5741.941c-1.747,1.585-.329,6.284-.776,10.05a61.8,61.8,0,0,1-1.834,9.041,41.946,41.946,0,0,0-1.066,10c.206,2.371,1.006,6.217,2.9,6.283s5.629-1.625,7.5-2.167,7.718-1.6,10.856-2.1,5.363-.139,4.938-4.171-2.28-7.1-2.777-9.222c-.7-2.985.133-9.537-1.814-11.572S10300.918,5740.356,10299.171,5741.941Z" transform="translate(-10247.395 -5609.568)" fill="#c4c4c4" stroke="#141313" stroke-width="1"/>
                         <path @click="showInjuryBox('Arrière_Coude_Droit')" id="Arrière_Coude_Droit" data-name="Arrière Coude Droit" d="M10305.4,5834.144c1.1,1.862,3.2,11.273,3.2,11.273s.875,2.268-1.062,3.4-21.412,2.473-22.559,1.755c-1.055-.659,0-4.154-1.028-6.884s-4.085-5.853-3.2-7.417,2.9-1.98,5.583-2.125,12.006-.99,13.875-1.155S10304.3,5832.282,10305.4,5834.144Z" transform="translate(-10228.664 -5665.202)" fill="#c4c4c4" stroke="#141313" stroke-width="1"/>
-                        <path @click="showInjuryBox('Arrière_Avant')" id="Arrière_Avant-Bras_Droit" data-name="Arrière Avant-Bras Droit" d="M10288.641,5885.769c1.8.941,1.767,1.528,2.829,8.162a161.088,161.088,0,0,1,1.367,18.8c.046,2.567,1.361,19.929,1.479,22.209s-1.56,2.3-2.847,2.3-9.46,1.357-11.146-.517-7-14.505-8.354-18.284-4.162-12.859-4.755-15.634-2.8-10.218-2.988-13.1.6-3.521,2.337-3.939S10286.846,5884.828,10288.641,5885.769Z" transform="translate(-10207.798 -5697.228)" fill="#c4c4c4" stroke="#141313" stroke-width="1"/>
+                        <path @click="showInjuryBox('Arrière_Avant_Bras_Droit')" id="Arrière_Avant_Bras_Droit" data-name="Arrière Avant-Bras Droit" d="M10288.641,5885.769c1.8.941,1.767,1.528,2.829,8.162a161.088,161.088,0,0,1,1.367,18.8c.046,2.567,1.361,19.929,1.479,22.209s-1.56,2.3-2.847,2.3-9.46,1.357-11.146-.517-7-14.505-8.354-18.284-4.162-12.859-4.755-15.634-2.8-10.218-2.988-13.1.6-3.521,2.337-3.939S10286.846,5884.828,10288.641,5885.769Z" transform="translate(-10207.798 -5697.228)" fill="#c4c4c4" stroke="#141313" stroke-width="1"/>
                         <path @click="showInjuryBox('Arrière_Poignet_Droit')" id="Arrière_Poignet_Droit" data-name="Arrière Poignet Droit" d="M10273.359,6028.636c1.314,1.069,2.084,6.736,1.407,8.259s-11.359,1.934-12.643.953-2.6-6.215-2.054-7.557,4.319-2.189,5.962-2.189S10272.051,6027.566,10273.359,6028.636Z" transform="translate(-10186.836 -5784.369)" fill="#c4c4c4" stroke="#141313" stroke-width="1"/>
                         <path @click="showInjuryBox('Arrière_Main_Droit')" id="Arrière_Main_Droit" data-name="Arrière Main Droit" d="M9645.8,6059.486c.89.831,1.965,5.688,1.965,8.12s.548,9.612,0,12.464-.91,6.293-1.965,8.192a41.576,41.576,0,0,1-5.471,6.809,10.681,10.681,0,0,1-4.159,2.841c-1.788.7-5.939,1.376-6.415.466a2.353,2.353,0,0,1,0-2.314c.32-.534,1.94-.952,3.272-.992s3.049-1.619,3.986-2.308,2.3-3.36,2.733-4.227,1.591-3.318,1.466-4.732-.267-3.326-.884-4.047-2.791-1.445-3.315-.8a8.879,8.879,0,0,0-.844,3.3,23.269,23.269,0,0,1-.679,3.477c-.452,1.647-.4,1.745-1.653,2.8s-1.571.563-2.062-.275-.27-3.352,0-5.332a53.542,53.542,0,0,0,1-6.71c.09-2.713-.187-6.981,0-8.614s.25-5.489,1.057-7.135,2.956-1.845,4.778-1.977S9644.91,6058.654,9645.8,6059.486Z" transform="translate(-9559.051 -5802.903)" fill="#c4c4c4" stroke="#141313" stroke-width="1"/>
                         <path @click="showInjuryBox('Lombaire_Droit')" id="Lombaire_Droit" data-name="Lombaire Droit" d="M10424.462,5837.2c.1,2.374-1.381,13.824-1.521,17.528s2.248,17.205,1.732,19.584-.477,3.329-3.339,3.023-10.079-5.979-14.532-5.826-11.483,5.665-12.916,6.8-3.577,3.506-6,2.885-2.66-.253-2.334-5.137,1.18-26.384,1.138-30.119-1.523-25.291-1.138-26.613.573-4.349,2.334-3.808,14.52,3.54,17.331,4.864,14.681,6.423,17.468,7.519S10424.36,5834.828,10424.462,5837.2Z" transform="translate(-10385.441 -5654.621)" fill="#c4c4c4" stroke="#141313" stroke-width="1"/>
@@ -102,7 +102,7 @@
             </svg>
         </div>
 
-        <div v-show="formInjury.showForm" class="inset-0 bg-red fixed">
+        <div v-show="formInjury.showForm" class="inset-0 fixed">
             <div class="bg-white bg-opacity-90 rounded-xl p-6 fixed top-1/2 left-1/2 -translate-y-1/2 -translate-x-1/2">
                 <form id="injuryform">
                     <div class="close_popup absolute top-5 right-5 text-gray-600" @click="hidePopup">X</div>
@@ -132,13 +132,30 @@
                     </div>
 
                     <div v-if="formInjury.showSubmit">
-                        <div class="text-gray-500 text-center font-medium text-sm">Es-tu en réathlétisation ? ?</div>
+                        <div class="text-gray-500 text-center font-medium text-sm">Es-tu en réathlétisation ?</div>
                         <div class="flex gap-4 justify-center">
                             <button class="py-2.5 px-6 text-white bg-blue-600 rounded-full gap-x-2 items-center hover:bg-blue-700 text-sm"
                                     type="button" @click="treatment(true)"> OUI </button>
                             <button class="py-2.5 px-6 text-white bg-blue-600 rounded-full gap-x-2 items-center hover:bg-blue-700 text-sm"
                                     type="button" @click="treatment(false)"> NON </button>
                         </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <div v-show="formInjury.showInfo" class="inset-0 fixed">
+            <div class="bg-white bg-opacity-90 rounded-xl p-6 fixed top-1/2 left-1/2 -translate-y-1/2 -translate-x-1/2  w-10/12">
+                <form id="injuryform">
+                    <div class="close_popup absolute top-5 right-5 text-gray-600" @click="hideShowPopup">X</div>
+                    <div class="text-gray-500 text-center font-bold pb-4">{{formInjury.bodyPartName}}</div>
+                    <div class="grid grid-cols-6 gap-2">
+                        <div class="col-span-4 text-gray-500 text-right">Intensité de la douleur : </div>
+                        <div class="col-span-2 text-gray-500">{{formInjury.injuryLevel}}</div>
+                    </div>
+                    <div class="grid grid-cols-6 gap-2">
+                        <div class="col-span-4 text-gray-500 text-right">Es-tu en réathlétisation : </div>
+                        <div class="col-span-2 text-gray-500 ">{{formInjury.reab}}</div>
                     </div>
                 </form>
             </div>
@@ -156,12 +173,16 @@ const props = defineProps({
     'injuries': Array
 })
 
+const injuriesTab = reactive([...props.injuries]);
+
 const formInjury = reactive({
     bodyPart: '',
     bodyPartName: '',
     bodyFront: true,
+    reab: 'Non',
     injuryLevel: 0,
     showForm: false,
+    showInfo: false,
     showSubmit: false,
 })
 
@@ -203,67 +224,137 @@ const bodyFrontRight = [
     {id:"Avant_Mollet_Droit", color:"#c4c4c4"},
     {id:"Cheville_Droit", color:"#c4c4c4"},
 ]
+const bodyBackLeft = [
+    {id: 'Arriere_Tete_Gauche', color:"#c4c4c4"},
+    {id: 'Cervicale_Gauche', color:"#c4c4c4"},
+    {id: 'Arrière_Epaule_Gauche', color:"#c4c4c4"},
+    {id: 'Dos_Gauche', color:"#c4c4c4"},
+    {id: 'Arrière_Biceps_Gauche', color:"#c4c4c4"},
+    {id: 'Arrière_Coude_Gauche', color:"#c4c4c4"},
+    {id: 'Arrière_Avant_Bras_Gauche', color:"#c4c4c4"},
+    {id: 'Arrière_Poignet_Gauche', color:"#c4c4c4"},
+    {id: 'Arrière_Main_Gauche', color:"#c4c4c4"},
+    {id: 'Lombaire_Gauche', color:"#c4c4c4"},
+    {id: 'Fessier_Gauche', color:"#c4c4c4"},
+    {id: 'Arrière_Adducteur_Gauche', color:"#c4c4c4"},
+    {id: 'Ischios_Gauche', color:"#c4c4c4"},
+    {id: 'Arrière_Genou_Gauche', color:"#c4c4c4"},
+    {id: 'Arrière_Mollet_Gauche', color:"#c4c4c4"},
+    {id: 'Talon_Gauche', color:"#c4c4c4"},
+]
+const bodyBackRight = [
+    {id:'Arriere_Tete_Droit', color:"#C4C4C4"},
+    {id:'Cervicale_Droit', color:"#C4C4C4"},
+    {id:'Arrière_Epaule_Droit', color:"#C4C4C4"},
+    {id:'Dos_Droit', color:"#C4C4C4"},
+    {id:'Arrière_Biceps_Droit', color:"#C4C4C4"},
+    {id:'Arrière_Coude_Droit', color:"#C4C4C4"},
+    {id:'Arrière_Avant_Bras_Droit', color:"#C4C4C4"},
+    {id:'Arrière_Poignet_Droit', color:"#C4C4C4"},
+    {id:'Arrière_Main_Droit', color:"#C4C4C4"},
+    {id:'Lombaire_Droit', color:"#C4C4C4"},
+    {id:'Fessier_Droit', color:"#C4C4C4"},
+    {id:'Arrière_Adducteur_Droit', color:"#C4C4C4"},
+    {id:'Ischios_Droit', color:"#C4C4C4"},
+    {id:'Arrière_Genou_Droit', color:"#C4C4C4"},
+    {id:'Arrière_Mollet_Droit', color:"#C4C4C4"},
+    {id:'Talon_Droit', color:"#C4C4C4"},
+]
 
-bodyFrontLeft.forEach(BodyPart => {
-    props.injuries.forEach(injury => {
-        if (injury.body_part_name === BodyPart.id) {
-            if(injury.value === 1) { BodyPart.color = '#7f1d1d' }
-            else if(injury.value === 2) { BodyPart.color = '#b91c1c' }
-            else if(injury.value === 3) { BodyPart.color = '#dc2626' }
-            else if(injury.value === 4) { BodyPart.color = '#ea580c' }
-            else if(injury.value === 5) { BodyPart.color = '#fb923c' }
-            else if(injury.value === 6) { BodyPart.color = '#fbbf24' }
-            else if(injury.value === 7) { BodyPart.color = '#84cc16' }
-            else if(injury.value === 8) { BodyPart.color = '#65a30d' }
-            else if(injury.value === 9) { BodyPart.color = '#16a34a' }
-            else if(injury.value === 10) { BodyPart.color = '#166534' }
-        }
-    });
-})
-bodyFrontRight.forEach(BodyPart => {
-    props.injuries.forEach(injury => {
-        if (injury.body_part_name === BodyPart.id) {
-            if(injury.value === 1) { BodyPart.color = '#7f1d1d' }
-            else if(injury.value === 2) { BodyPart.color = '#b91c1c' }
-            else if(injury.value === 3) { BodyPart.color = '#dc2626' }
-            else if(injury.value === 4) { BodyPart.color = '#ea580c' }
-            else if(injury.value === 5) { BodyPart.color = '#fb923c' }
-            else if(injury.value === 6) { BodyPart.color = '#fbbf24' }
-            else if(injury.value === 7) { BodyPart.color = '#84cc16' }
-            else if(injury.value === 8) { BodyPart.color = '#65a30d' }
-            else if(injury.value === 9) { BodyPart.color = '#16a34a' }
-            else if(injury.value === 10) { BodyPart.color = '#166534' }
-        }
-    });
-})
+function applyInjuriesColor(bodyArray) {
+    bodyArray.forEach(BodyPart => {
+        injuriesTab.forEach(injury => {
+            if (injury.body_part_name === BodyPart.id) {
+                if(injury.value === 1) { BodyPart.color = '#7f1d1d' }
+                else if(injury.value === 2) { BodyPart.color = '#b91c1c' }
+                else if(injury.value === 3) { BodyPart.color = '#dc2626' }
+                else if(injury.value === 4) { BodyPart.color = '#ea580c' }
+                else if(injury.value === 5) { BodyPart.color = '#fb923c' }
+                else if(injury.value === 6) { BodyPart.color = '#fbbf24' }
+                else if(injury.value === 7) { BodyPart.color = '#84cc16' }
+                else if(injury.value === 8) { BodyPart.color = '#65a30d' }
+                else if(injury.value === 9) { BodyPart.color = '#16a34a' }
+                else if(injury.value === 10) { BodyPart.color = '#166534' }
+            }
+        });
+    })
+}
+function applyInjuriesColors(){
+    applyInjuriesColor(bodyFrontLeft);
+    applyInjuriesColor(bodyFrontRight);
+    applyInjuriesColor(bodyBackLeft);
+    applyInjuriesColor(bodyBackRight);
+}
+applyInjuriesColors()
 
-onMounted(() => {
+function updateFrontBodyColor() {
     bodyFrontLeft.forEach(BodyPart => {
         const svg = document.getElementById(BodyPart.id);
         svg.setAttribute('fill', BodyPart.color);
     });
-
     bodyFrontRight.forEach(BodyPart => {
         const svg = document.getElementById(BodyPart.id);
         svg.setAttribute('fill', BodyPart.color);
     });
+}
+function updateBackBodyColor() {
+    bodyBackLeft.forEach(BodyPart => {
+        const svg = document.getElementById(BodyPart.id);
+        svg.setAttribute('fill', BodyPart.color);
+    });
+    bodyBackRight.forEach(BodyPart => {
+        const svg = document.getElementById(BodyPart.id);
+        svg.setAttribute('fill', BodyPart.color);
+    });
+}
 
+
+onMounted(() => {
+    updateFrontBodyColor()
 });
 
 
 // Fonction permettant de récupérer l'id de la partie du corp cliqué et d'afficher la pop-up pour selectionner le niveau de douleur
-function showInjuryBox(svgId){
+function showInjuryBox(svgId) {
+    let isAlreadyInjured = false;
+
+    for(let injury of injuriesTab) {
+        if(injury.body_part_name === svgId) {
+            console.log(injury)
+            isAlreadyInjured = true;
+            if(injury.need_treatment === 1){
+                formInjury.reab = 'Oui';
+            }
+            formInjury.injuryLevel = injury.value;
+            break;
+        }
+    }
+
+    if(isAlreadyInjured) {
+        formInjury.showInfo = true;
+        return; // Si la partie du corps est déjà blessée, on arrête l'exécution de la fonction ici.
+    }
+
     const svg = document.getElementById(svgId);
     svg.style.fill = 'red';
-    formInjury.bodyPart = svgId
-    formInjury.showForm = true
-    formInjury.bodyPartName = svg.dataset.name
+    formInjury.bodyPart = svgId;
+    formInjury.showForm = true;
+    formInjury.bodyPartName = svg.dataset.name;
 }
 
 function hidePopup(){
     formInjury.showForm = false
     formInjury.showSubmit = false
-    document.getElementById(formInjury.bodyPart).style.fill = '#c4c4c4'
+
+    applyInjuriesColors()
+    updateFrontBodyColor()
+    updateBackBodyColor()
+}
+
+function hideShowPopup(){
+    formInjury.reab = 'Non';
+    formInjury.injuryLevel = 0;
+    formInjury.showInfo = false
 }
 function injuryLevel(value){
     formInjury.showSubmit = true
@@ -271,9 +362,11 @@ function injuryLevel(value){
 }
 function showFront(){
     formInjury.bodyFront = true
+    updateFrontBodyColor()
 }
 function showBack(){
     formInjury.bodyFront = false
+    updateBackBodyColor()
 }
 
 // Initialisation du formulaire pour récupérer les infos saisi par le joueur
@@ -289,6 +382,14 @@ function treatment(needed){
     form.value = formInjury.injuryLevel
     hidePopup()
     form.post('/body/store')
+
+    const newInjury = reactive({
+        value: formInjury.injuryLevel,
+        need_treatment: needed ? 1 : 0,
+        body_part_name: formInjury.bodyPart
+    });
+    injuriesTab.push(newInjury);
+
     form.value = null
 }
 
