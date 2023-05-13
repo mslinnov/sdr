@@ -82,7 +82,7 @@
             <div v-else>
                 <div class="flex items-center justify-between mx-12">
                     <div class="flex items-center">
-                        <img :src="'/image/overall_condition_type/' + lastCondition.name + '.png'"
+                        <img :src="'/image/overall_condition_type/' + lastCondition.name.toLowerCase() + '.png'"
                              :alt="lastCondition.name + ' emoji'"
                              class="h-12 w-12">
                         <div class="text-gray-600 text-sm ">

@@ -32,7 +32,7 @@
             <td class="td-body">{{user.first_name}} {{user.last_name}}</td>
             <td class=" td-body">
                 <div class="flex items-center justify-center flex-col">
-                    <img :src="'/image/overall_condition_type/'+getOverallConditionNameById(overall_condition_types, getLastOverallConditionType(total_reviews, user))+'.png'"
+                    <img :src="'/image/overall_condition_type/'+getOverallConditionNameById(overall_condition_types, getLastOverallConditionType(total_reviews, user)).toLowerCase()+'.png'"
                          alt="Emoji of the last overall condition"
                          class="w-8 h-8">
                     <span class="text-secondary">{{
