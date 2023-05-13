@@ -1,7 +1,7 @@
 <template>
     <section class="grid grid-cols-4 gap-4">
         <Box class="col-span-2 hover:cursor-pointer"
-             @click="downloadData(lastWeek.day(1).format('YYYY-MM-DD'), lastWeek.day(7).format('YYYY-MM-DD'))">
+             @click="downloadData(lastWeek.startOf('isoWeek').format('YYYY-MM-DD'), lastWeek.endOf('isoWeek').format('YYYY-MM-DD'))">
             <div class="flex gap-4">
                 <ArrowDownOnSquareIcon class="w-12"/>
                 <div>
@@ -11,7 +11,7 @@
             </div>
         </Box>
         <Box class="col-span-2 hover:cursor-pointer"
-             @click="downloadData(thisWeek.day(1).format('YYYY-MM-DD'), thisWeek.day(7).format('YYYY-MM-DD'))">
+             @click="downloadData(thisWeek.startOf('isoWeek').format('YYYY-MM-DD'), thisWeek.endOf('isoWeek').format('YYYY-MM-DD'))">
             <div class="flex gap-4">
                 <ArrowDownOnSquareIcon class="w-12"/>
                 <div>
@@ -46,23 +46,24 @@
 import moment from "moment";
 import Box from "@/Components/UI/Box.vue";
 import {ArrowDownOnSquareIcon} from "@heroicons/vue/24/outline";
-import {ref} from "vue";
+import { ref, computed } from 'vue';
 import VueTailwindDatepicker from 'vue-tailwind-datepicker'
 
-// Création des variables pour cette semaine et la précédentes
-const thisWeek = moment()
-const lastWeek = moment().add(-1,'weeks')
-const rangeValue = ref([])
+// Création des variables pour cette semaine et la précédentes// Création des variables pour cette semaine et la précédentes
+const thisWeek = computed(() => moment().locale('fr').startOf('isoWeek'));
+const lastWeek = computed(() => moment().locale('fr').subtract(1, 'weeks').startOf('isoWeek'));
+const rangeValue = ref([]);
 const formatter = ref({
     date: 'DD MMM YYYY',
     month: 'MMM'
-})
+});
 
 function downloadRangeData(){
     downloadData(rangeValue.value[0], rangeValue.value[1])
 }
 
 function downloadData(startDate, endDate){
+    console.log("Download data : ",startDate, endDate)
     const url = route('export', { startDate: startDate, endDate: endDate });
     window.open(url, '_blank');
 }
