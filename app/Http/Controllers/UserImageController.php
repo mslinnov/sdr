@@ -21,7 +21,7 @@ class UserImageController extends Controller
 
         if ($request->hasFile('images')){
             foreach ($request->file('images') as $file) {
-                $path = $file->store('image/players', 'public');
+                $path = $file->store('image/players', 'public_direct');
                 // Creation of a new UserImage with the $path of the uploaded image
                 $newImage = new UserImage([
                     'filename' =>$path
