@@ -3,8 +3,8 @@
         <template #header> {{ title }}</template>
         <img :src="user.user_image.src" v-if="user.user_image" alt="Photo de profil du joueur" class="rounded-full object-top object-cover h-60 w-60 m-auto mt-4">
         <form @submit.prevent="upload">
-            <section class="flex gap-2 justify-between items-center">
-                <input class="border rounded-md file:px-4 file:py-2 border-blue-600 file:mr-4 file:bg-slate-100 file:hover:bg-slate-200 file:font-medium file:text-blue-600 file:border-0 file:cursor-pointer"
+            <section class="flex-col sm:flex-row flex gap-2 justify-between items-center">
+                <input class="w-full border rounded-md file:px-4 file:py-2 border-blue-600 file:mr-4 file:bg-slate-100 file:hover:bg-slate-200 file:font-medium file:text-blue-600 file:border-0 file:cursor-pointer"
                     type="file" @input="addFiles"/>
                 <div class="flex gap-2">
                     <button type="submit" class="btn-outline-small disabled:opacity-25 disabled:cursor-not-allowed" :disabled="!canUpload">Upload</button>

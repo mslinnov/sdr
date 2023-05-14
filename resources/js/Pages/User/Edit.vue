@@ -45,6 +45,16 @@
                         </select>
                         <div v-if="form.errors.lending_club_id" class="input-error">{{ form.errors.lending_club_id }}</div>
                     </div>
+                    <div>
+                        <label for="password" class="form-label">Password</label>
+                        <input id="password" class="form-input" v-model="form.password" type="password" autocomplete="new-password"/>
+                        <div v-if="form.errors.password" class="input-error">{{ form.errors.password }}</div>
+                    </div>
+
+                    <div>
+                        <label for="password_confirmation" class="form-label">Confirm password</label>
+                        <input id="password_confirmation" class="form-input" v-model="form.password_confirmation" type="password"/>
+                    </div>
                 </div>
             </div>
 
@@ -73,7 +83,9 @@ const form = useForm({
     last_name: props.user.last_name,
     email: props.user.email,
     phone: props.user.phone,
-    lending_club_id: props.user.lending_club_id
+    lending_club_id: props.user.lending_club_id,
+    password: '',
+    password_confirmation: '',
 })
 
 const update = () => form.put(`/user/${props.user.id}`)
