@@ -11,7 +11,10 @@
     <main class="max-w-screen-xl px-4 mx-auto">
         <div v-for="survey in surveys" v-bind:class="{'hidden': openTab !== survey.order, 'block': openTab === survey.order}">
             <div v-if="hadARespondThisWeek[survey.id]">
-                <SurveyCompleted/>
+                <SurveyCompleted
+                    :survey-questions="survey"
+                    :survey-responses="surveyResponses"
+                />
             </div>
             <div v-else>
                 <SurveyElements
@@ -35,8 +38,8 @@ const props = defineProps({
     surveyResponses: Array,
 })
 
-
 const responses = props.surveyResponses
+
 const datas = reactive({
     lastWeekTuesday: moment().day(-5),
     thisWeekTuesday: moment().day(2),
@@ -47,7 +50,6 @@ const datas = reactive({
 function handle(surveyCompletedId){
     datas.surveyStatus[surveyCompletedId] = true
 }
-
 
 // Création d'un objet qui contient la date de la dernière réponse pour chaque formulaire
 const hadARespondThisWeek = reactive({})
@@ -64,7 +66,6 @@ for (let survey of props.surveys){
     }// If there is no answer
     else{ hadARespondThisWeek[id] = false }
 }
-
 
 
 </script>

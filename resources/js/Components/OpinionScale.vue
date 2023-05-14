@@ -44,15 +44,10 @@ for (let [key, value] of props.responseElements){
 
 
 for (let rep of currentResponses){
-    console.log("rep")
-    console.log(rep)
 }
 
 // Calcule du pourcentage
 
-console.log("Current Responses")
-console.log(currentResponses)
-console.log(totalAnswers)
 
 
 const answers = [

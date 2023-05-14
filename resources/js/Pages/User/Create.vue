@@ -35,6 +35,7 @@
                     <select id="lending_club" class="form-input" v-model="form.lending_club_id">
                         <option v-for="club in clubs" :value="club.id">{{club.name}}</option>
                     </select>
+                    <div v-if="form.errors.lending_club_id" class="input-error">{{ form.errors.lending_club_id }}</div>
                 </div>
                 <div class="lg:col-span-3">
                     <label for="password" class="form-label">Password</label>

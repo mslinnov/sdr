@@ -61,6 +61,4 @@ const props = defineProps({
     clubs: Object,
 })
 
-console.log(props.clubs.data[1])
-
 </script>

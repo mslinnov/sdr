@@ -34,8 +34,6 @@ const props = defineProps({
     club: Object,
 })
 
-console.log(props.club.name)
-
 const form = useForm({
     name: props.club.name,
 })

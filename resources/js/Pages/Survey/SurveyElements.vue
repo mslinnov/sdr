@@ -98,7 +98,6 @@ const formSubmit = reactive({
 
 // Initialisation du formulaire pour récupérer les infos saisi par le joueur
 const form = reactive(useForm(formElement));
-console.log("Form : ", form)
 
 // Vérification que tous les champs sont remplis avant d'envoyer le formulaire
 const isFormValid = () => {

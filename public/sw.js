@@ -61,12 +61,10 @@ self.addEventListener("fetch", (event) => {
 });
 
 self.addEventListener('push', (event) => {
-    console.log("push")
     const data = event.data ? event.data.json() : {};
     event.waitUntil(
         self.registration.showNotification(data.title, data)
     )
-    console.log(data)
 })
 
 self.addEventListener('notificationclick', (event) => {

@@ -134,7 +134,6 @@ const page = usePage()
 const user = computed(
     () => page.props.value.user
 )
-console.log("user : ",user)
 
 const unreadNotificationsCount = computed(
     () => page.props.value.unreadNotificationsCount

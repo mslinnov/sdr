@@ -63,7 +63,6 @@ function downloadRangeData(){
 }
 
 function downloadData(startDate, endDate){
-    console.log("Download data : ",startDate, endDate)
     const url = route('export', { startDate: startDate, endDate: endDate });
     window.open(url, '_blank');
 }

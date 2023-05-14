@@ -33,7 +33,7 @@ class SurveyController extends Controller
      */
     public function create()
     {
-        $surveyResponses = SurveyReponse::with('survey')->where('user_id','=', Auth::user()->id)->get();
+        $surveyResponses = SurveyReponse::with('survey', 'reponseElements')->where('user_id','=', Auth::user()->id)->get();
 
         return inertia(
             'Survey/Create',

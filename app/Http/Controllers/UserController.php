@@ -57,8 +57,8 @@ class UserController extends Controller
             'first_name' => 'required',
             'last_name' => 'required',
             'email' => 'required|email|unique:users',
-            'phone' => 'min:4',
-            'lending_club_id' => 'integer',
+            'phone' => '',
+            'lending_club_id' => 'required|integer',
             'password' => 'required|min:8|confirmed',
         ]));
 
