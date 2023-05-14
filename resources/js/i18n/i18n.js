@@ -47,7 +47,8 @@ const messages = {
 }
 
 export const i18n = createI18n({
-    locale: 'fr', // set locale
+    legacy: false,
+    locale: window.navigator.language, // set locale
     fallbackLocale: 'en', // set fallback locale
     messages, // set locale messages
 })
