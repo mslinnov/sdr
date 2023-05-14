@@ -1,7 +1,7 @@
 <template>
     <Box>
         <template #header> {{ title }}</template>
-        <img :src="user.image" v-if="user.image" alt="Photo de profil du joueur" class="rounded-full object-top object-cover h-60 w-60 m-auto mt-4">
+        <img :src="user.user_image.src" v-if="user.user_image" alt="Photo de profil du joueur" class="rounded-full object-top object-cover h-60 w-60 m-auto mt-4">
         <form @submit.prevent="upload">
             <section class="flex gap-2 justify-between items-center">
                 <input class="border rounded-md file:px-4 file:py-2 border-blue-600 file:mr-4 file:bg-slate-100 file:hover:bg-slate-200 file:font-medium file:text-blue-600 file:border-0 file:cursor-pointer"
@@ -28,6 +28,9 @@ const props = defineProps({
     user: Object,
     title: Object,
 })
+
+console.log("user : ", props.user)
+
 Inertia.on('progress', (event) => {
     if (event.detail.progress.percentage){
         NProgress.set((event.detail.progress.percentage/100)*0.9)
@@ -35,7 +38,6 @@ Inertia.on('progress', (event) => {
     if (event.detail.progress.percentage === 100){
         setTimeout(function () { resetImage() }.bind(this), 1000)
     }
-    console.log(event.detail.progress)
 })
 
 const userImage = reactive({
