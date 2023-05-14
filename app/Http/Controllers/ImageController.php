@@ -11,7 +11,7 @@ class ImageController extends Controller
     public function create(LendingClub $lendingClub){
 
         $lendingClub->load('image');
-        dd($lendingClub);
+
         return inertia(
             'LendingClub/Image/Create', [
             'lendingClub' => $lendingClub,
@@ -22,7 +22,7 @@ class ImageController extends Controller
 
         if ($request->hasFile('images')){
             foreach ($request->file('images') as $file) {
-                $path = $file->store('clubs', 'public');
+                $path = $file->store('clubs', 'public_direct');
                 // Creation of a new UserImage with the $path of the uploaded image
                 $newImage = new Image([
                     'filename' =>$path
