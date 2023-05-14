@@ -25,7 +25,7 @@ class Image extends Model
     }
 
     public function getSrcAttribute(){
-        return asset("storage/{$this->filename}");
+        return asset("{$this->filename}");
     }
 
 }
