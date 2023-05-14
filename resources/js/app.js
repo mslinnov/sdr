@@ -1,5 +1,6 @@
 // import './bootstrap';
 import { createApp, h } from 'vue'
+import { i18n } from './i18n/i18n'
 import { createInertiaApp } from '@inertiajs/inertia-vue3'
 import {InertiaProgress} from "@inertiajs/progress";
 import MainLayout from "@/Layouts/MainLayout.vue"
@@ -39,6 +40,7 @@ createInertiaApp({
     setup({ el, App, props, plugin }) {
         createApp({ render: () => h(App, props) })
             .use(plugin)
+            .use(i18n)
             .use(ZiggyVue)
             .mount(el)
     },

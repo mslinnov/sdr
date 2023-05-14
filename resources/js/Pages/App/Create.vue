@@ -1,12 +1,11 @@
 <template>
     <main class="bg-slate-50 w-full pb-10 pt-2">
         <div class="pb-4 m-4">
-            <h1 class="font-medium text-2xl ">Content de te revoir!</h1>
-            <span>Salut, {{user.first_name}}</span>
+            <h1 v-t="'appCreate.welcome'"  class="font-medium text-2xl "></h1>
+            <span v-t="'appCreate.hello'"></span> <span>{{user.first_name}}</span>
         </div>
         <div>
-            <h2 class="font-medium text-xl pb-4 ml-4">Comment vas-tu ?</h2>
-            <!-- TODO: Remplacer le bouton sumbit par le clic sur l'icone -->
+            <h2 v-t="'appCreate.how_are_you'" class="font-medium text-xl pb-4 ml-4"></h2>
 
             <div v-if="!datas.hadARespondThisWeek">
                 <form @submit.prevent="create" id="overallConditionCreateForm">
@@ -36,8 +35,9 @@
                     </div>
                     <div class="flex items-center flex-col">
                         <button type="submit"
-                                class="btn-primary-rounded">
-                            Submit
+                                class="btn-primary-rounded"
+                                :disabled="!form.overall_condition_choice">
+                            <span v-t="'appCreate.submit'"></span>
                         </button>
                     </div>
 
@@ -72,8 +72,9 @@
                     <div class="flex items-center flex-col display-none">
                         <button type="submit"
                                 id="update_condition"
-                                class="btn-primary-rounded">
-                            Update
+                                class="btn-primary-rounded"
+                                :disabled="!updateForm.overall_condition_choice">
+                            <span v-t="'appCreate.update'"></span>
                         </button>
                     </div>
 
@@ -93,7 +94,7 @@
                         <button type="submit"
                                 class="btn-primary-rounded"
                                 @click="editFormSwitch">
-                            Edit
+                            <span v-t="'appCreate.edit'"></span>
                         </button>
                     </div>
 
@@ -107,7 +108,7 @@
                     <div class="rounded-full bg-blue-100 p-3">
                         <img :src="'/image/icon/formulaire.png'" alt="Icone de formulaire" class="aspect-square w-10 object-contain object-center">
                     </div>
-                    <div class="text-blue-600 font-bold">Questionnaire</div>
+                    <div class="text-blue-600 font-bold"><span v-t="'appCreate.questionnaire'"></span></div>
                 </div>
                 <ChevronRightIcon class="h-6 w-6 text-gray-700"/>
             </Link>
@@ -116,7 +117,7 @@
                     <div class="rounded-full bg-blue-100 p-3">
                         <img :src="'/image/icon/blessures.png'" alt="Icone de formulaire" class="aspect-square w-10 object-contain object-center">
                     </div>
-                    <div class="text-blue-600 font-bold">Blessure</div>
+                    <div class="text-blue-600 font-bold"><span v-t="'appCreate.injury'"></span></div>
                 </div>
                 <ChevronRightIcon class="h-6 w-6 text-gray-700"/>
             </Link>
@@ -140,6 +141,9 @@ const page = usePage()
 const user = computed(
     () => page.props.value.user
 )
+
+console.log(user)
+
 
 let datas;
 datas = reactive({
