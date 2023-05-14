@@ -47,7 +47,7 @@ class HandleInertiaRequests extends Middleware
                     'last_name' => $request->user()->last_name,
                     'email' => $request->user()->email,
                     'phone' => $request->user()->phone,
-                    'image' => $request->user()->userImage()->first() ? asset('storage/app/public/' . $request->user()->userImage()->first()->filename) : null,
+                    'image' => $request->user()->userImage()->first() ? asset('storage/' . $request->user()->userImage()->first()->filename) : null,
                 ] : null,
             'unreadNotificationsCount' => $request->user() ? [$request->user()->unreadNotifications()->count()] : null
         ]);
