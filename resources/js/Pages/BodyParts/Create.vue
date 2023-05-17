@@ -265,16 +265,16 @@ function applyInjuriesColor(bodyArray) {
     bodyArray.forEach(BodyPart => {
         injuriesTab.forEach(injury => {
             if (injury.body_part_name === BodyPart.id) {
-                if(injury.value === 1) { BodyPart.color = '#7f1d1d' }
-                else if(injury.value === 2) { BodyPart.color = '#b91c1c' }
-                else if(injury.value === 3) { BodyPart.color = '#dc2626' }
-                else if(injury.value === 4) { BodyPart.color = '#ea580c' }
-                else if(injury.value === 5) { BodyPart.color = '#fb923c' }
-                else if(injury.value === 6) { BodyPart.color = '#fbbf24' }
-                else if(injury.value === 7) { BodyPart.color = '#84cc16' }
-                else if(injury.value === 8) { BodyPart.color = '#65a30d' }
-                else if(injury.value === 9) { BodyPart.color = '#16a34a' }
-                else if(injury.value === 10) { BodyPart.color = '#166534' }
+                if(injury.value === 10) { BodyPart.color = '#7f1d1d' }
+                else if(injury.value === 9) { BodyPart.color = '#b91c1c' }
+                else if(injury.value === 8) { BodyPart.color = '#dc2626' }
+                else if(injury.value === 7) { BodyPart.color = '#ea580c' }
+                else if(injury.value === 6) { BodyPart.color = '#fb923c' }
+                else if(injury.value === 5) { BodyPart.color = '#fbbf24' }
+                else if(injury.value === 4) { BodyPart.color = '#84cc16' }
+                else if(injury.value === 3) { BodyPart.color = '#65a30d' }
+                else if(injury.value === 2) { BodyPart.color = '#16a34a' }
+                else if(injury.value === 1) { BodyPart.color = '#166534' }
             }
         });
     })
