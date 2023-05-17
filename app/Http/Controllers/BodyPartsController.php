@@ -17,9 +17,11 @@ class BodyPartsController extends Controller
      * @return \Inertia\Response|\Inertia\ResponseFactory
      */
     public function create(){
+        $today = date('Y-m-d');
+        $dayOfWeek = date('l');
 
-        $from = date('Y-m-d', strtotime('last wednesday'));
-        $to = date('Y-m-d');
+        $from = ($dayOfWeek === 'Wednesday') ? $today : date('Y-m-d', strtotime('last wednesday'));
+        $to = $today;
 
         $injuries = Injury::where('user_id', Auth::user()->id)->whereBetween('updated_at', [$from, $to])->get();
         $injuriesTab = [];
