@@ -121,7 +121,7 @@
                                       border-white
                                       hover:text-gray-600 hover:bg-blue-500
                                       peer-checked:border-blue-500 peer-checked:border-2 peer-checked:bg-blue-600"
-                                   :class="'survey-scale-selector-'+n"
+                                   :class="'survey-scale-selector-'+(11-n)"
                                     @click="injuryLevel(n)">
                                 <div class="text-xs text-gray-400 font-medium text-white">
                                     {{n}}
