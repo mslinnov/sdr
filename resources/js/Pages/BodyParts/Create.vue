@@ -343,6 +343,7 @@ function showInjuryBox(svgId) {
     formInjury.bodyPart = svgId;
     formInjury.showForm = true;
     formInjury.bodyPartName = svg.dataset.name;
+    console.log(svg.dataset)
 }
 
 function hidePopup(){

@@ -18,8 +18,8 @@ class BodyPartsController extends Controller
      */
     public function create(){
 
-        $from = date('2023-05-10');
-        $to = date('2023-05-16');
+        $from = date('Y-m-d', strtotime('last wednesday'));
+        $to = date('Y-m-d');
 
         $injuries = Injury::where('user_id', Auth::user()->id)->whereBetween('updated_at', [$from, $to])->get();
         $injuriesTab = [];
