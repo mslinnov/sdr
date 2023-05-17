@@ -142,9 +142,6 @@ const user = computed(
     () => page.props.value.user
 )
 
-console.log(user)
-
-
 let datas;
 datas = reactive({
     editForm: false,
