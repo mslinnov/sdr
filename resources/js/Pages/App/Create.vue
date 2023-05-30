@@ -27,7 +27,7 @@
                                      class="w-10 pb-3"
                                      :key="overall_condition_type.id">
                                 <div class="text-sm text-gray-400 font-medium">
-                                    {{overall_condition_type.name}}
+                                    <span v-t="overall_condition_type.name"></span>
                                 </div>
                             </label>
                             <br>

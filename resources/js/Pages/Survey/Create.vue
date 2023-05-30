@@ -2,7 +2,7 @@
     <div class="h-12 max-w-screen-xl px-8 m-auto flex gap-4 items-center justify-center">
         <ul class="flex flex-wrap -mb-px">
             <li class="mr-2 flex" v-for="survey in surveys">
-                <a  v-on:click="toggleTabs(survey.order)"  v-bind:class="{'app-inactive-tab': openTab !== survey.order, 'app-active-tab': openTab === survey.order}">{{ survey.name }}</a>
+                <a  v-on:click="toggleTabs(survey.order)"  v-bind:class="{'app-inactive-tab': openTab !== survey.order, 'app-active-tab': openTab === survey.order}"><span v-t="survey.name"></span></a>
                 <CheckCircleIcon v-if="hadARespondThisWeek[survey.id] || datas.surveyStatus[survey.id]" class="h-4 w-4 text-white bg-green-600 rounded-full -ml-2"/>
             </li>
         </ul>

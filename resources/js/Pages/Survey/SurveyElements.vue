@@ -12,7 +12,7 @@
             <div class="w-full" v-for="surveyElement in survey.survey_elements" :id="'survey_element_'+surveyElement.id" :ref="'surveyElement'+surveyElement.id">
                 <SurveyElementBox class="mt-8">
                     <template #image><img :src="'/image/icon/'+surveyElement.survey_input.image" class="img-survey-create"></template>
-                    <template #title><div class="text-gray-500 font-medium text-sm text-center">{{surveyElement.survey_input.title}} </div></template>
+                    <template #title><div class="text-gray-500 font-medium text-sm text-center">  <span v-t="surveyElement.survey_input.title"></span></div></template>
                     <div v-if="surveyElement.element_type_id === 1" class="flex flex-row justify-evenly	 pt-3">
                         <div v-for="n in 10">
                             <input type="radio" :required="true"
@@ -34,15 +34,15 @@
                         </div>
                     </div>
                     <div v-if="surveyElement.element_type_id === 1"  class="w-full flex justify-between pt-1">
-                        <div class="surveyLegend">{{surveyElement.survey_input.legend_1}}</div>
-                        <div class="surveyLegend">{{surveyElement.survey_input.legend_10}}</div>
+                        <div class="surveyLegend"><span v-t="surveyElement.survey_input.legend_1"></span></div>
+                        <div class="surveyLegend"><span v-t="surveyElement.survey_input.legend_10"></span></div>
                     </div>
                     <div v-if="surveyElement.element_type_id === 2">
                         <input type="text"
                                :id="'id_'+surveyElement.id"
                                v-model="form[surveyElement.formid]"
                                class="form-input mt-4"
-                               :placeholder="surveyElement.survey_input.placeholder"
+                               :placeholder="t(surveyElement.survey_input.placeholder)"
                                required>
                     </div>
                 </SurveyElementBox>
@@ -66,10 +66,13 @@ import SurveyElementBox from "@/Components/UI/SurveyElementBox.vue";
 import {useForm} from '@inertiajs/inertia-vue3'
 import {reactive} from "vue";
 import SurveyCompleted from "@/Components/UI/SurveyCompleted.vue";
+import { useI18n } from 'vue-i18n';
+const { t } = useI18n();
 
 const props = defineProps({
     survey: Object,
 })
+
 
 // Initialisation du tableau form qui contiendra les valeurs du formulaire
 const formElement = {}
@@ -81,7 +84,7 @@ function resetFormElement() {
         // Je rajouter un element formid au survey element courrant avec le nom du survey element à l'intérieur
         surveyElement['formid'] = surveyElementName
         if(surveyElement.element_type_id === 2 && surveyElement.survey_input.placeholder ){
-            formElement[surveyElementName] = surveyElement.survey_input.placeholder
+            formElement[surveyElementName] = t(surveyElement.survey_input.placeholder)
         }
         else{
             formElement[surveyElementName] = null

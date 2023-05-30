@@ -1,7 +1,7 @@
 <!-- TODO: Ajouter un bouton d'installation du projet sur smartphone -->
 <template>
     <div class="w-full p-4">
-        <h2 class="text-center">Paramètre du compte</h2>
+        <h2 class="text-center"><span v-t="'AuthMyAccount.title'"></span></h2>
     </div>
     <div class="flex flex-col gap-4 items-center px-10">
 
@@ -13,7 +13,7 @@
             <div class="my-account-input-box">
                 <div class="inline-flex gap-2 items-center">
                     <IdentificationIcon class="icon-primary"/>
-                    <label for="firstname" class="text-primary">Prénom</label>
+                    <label for="firstname" class="text-primary"><span v-t="'AuthMyAccount.first_name'"></span></label>
                 </div>
                 <input id="firstname" class="edit-input" v-model="form.first_name" type="text"/>
                 <div v-if="form.errors.first_name" class="input-error">{{ form.errors.first_name }}</div>
@@ -21,7 +21,7 @@
             <div class="my-account-input-box">
                 <div class="inline-flex gap-2 items-center">
                     <IdentificationIcon class="icon-primary"/>
-                    <label for="lastname" class="text-primary">Nom</label>
+                    <label for="lastname" class="text-primary"><span v-t="'AuthMyAccount.last_name'"></span></label>
                 </div>
                 <input id="lastname" class="edit-input" v-model="form.last_name" type="text"/>
                 <div v-if="form.errors.last_name" class="input-error">{{ form.errors.last_name }}</div>
@@ -29,7 +29,7 @@
             <div class="my-account-input-box">
                 <div class="inline-flex gap-2 items-center">
                     <EnvelopeIcon class="icon-primary"/>
-                    <label for="email" class="text-primary">Email</label>
+                    <label for="email" class="text-primary"><span v-t="'AuthMyAccount.email'"></span></label>
                 </div>
                 <input id="email" class="edit-input" v-model="form.email" type="text"/>
                 <div v-if="form.errors.email" class="input-error">{{ form.errors.email }}</div>
@@ -37,7 +37,7 @@
             <div class="my-account-input-box">
                 <div class="inline-flex gap-2 items-center">
                     <PhoneIcon class="icon-primary"/>
-                    <label for="phone" class="text-primary">Téléphone</label>
+                    <label for="phone" class="text-primary"><span v-t="'AuthMyAccount.phone'"></span></label>
                 </div>
                 <input id="phone" class="edit-input" v-model="form.phone" type="tel"/>
                 <div v-if="form.errors.phone" class="input-error">{{ form.errors.phone }}</div>
@@ -46,14 +46,14 @@
             <div class="my-account-input-box">
                 <div class="inline-flex gap-2 items-center">
                     <LockClosedIcon class="icon-primary"/>
-                    <label for="password" class="text-primary">Mot de passe</label>
+                    <label for="password" class="text-primary"><span v-t="'AuthMyAccount.password'"></span></label>
                 </div>
                 <input id="password" class="edit-input" v-model="form.password" type="password"  placeholder="********"/>
             </div>
             <div class="my-account-input-box">
                 <div class="inline-flex gap-2 items-center">
                     <LockClosedIcon class="icon-primary"/>
-                    <label for="password_confirmation" class="text-primary">Confirmation</label>
+                    <label for="password_confirmation" class="text-primary"><span v-t="'AuthMyAccount.confirmation'"></span></label>
                 </div>
                 <input id="password_confirmation" class="edit-input" v-model="form.password_confirmation" type="password" placeholder="********"/>
             </div>
@@ -61,10 +61,10 @@
 
             <div class="flex gap-4 items-center w-full md:w-1/2">
                 <button class="btn-primary-rounded w-2/3 md:w-2/3 text-center" type="submit">
-                    Sauvegarder
+                    <span v-t="'AuthMyAccount.save'"></span>
                 </button>
                 <button class="alert-primary-rounded w-2/3 md:w-2/3 text-center" type="button" @click="showEditProfil">
-                    Annuler
+                    <span v-t="'AuthMyAccount.cancel'"></span>
                 </button>
             </div>
         </form>
@@ -73,14 +73,14 @@
             <div class="my-account-input-box">
                 <div class="inline-flex gap-2 items-center">
                     <IdentificationIcon class="icon-primary"/>
-                    <label for="show_firstname" class="text-primary">Prénom</label>
+                    <label for="show_firstname" class="text-primary"><span v-t="'AuthMyAccount.first_name'"></span></label>
                 </div>
                 <input id="show_firstname" class="no-edit-input" v-model="form.first_name" type="text"/>
             </div>
             <div class="my-account-input-box">
                 <div class="inline-flex gap-2 items-center">
                     <IdentificationIcon class="icon-primary"/>
-                    <label for="show_lastname" class="text-primary">Nom</label>
+                    <label for="show_lastname" class="text-primary"><span v-t="'AuthMyAccount.last_name'"></span></label>
                 </div>
                 <input id="show_lastname" class="no-edit-input" v-model="form.last_name" type="text"/>
                 <div v-if="form.errors.last_name" class="input-error">{{ form.errors.last_name }}</div>
@@ -88,7 +88,7 @@
             <div class="my-account-input-box">
                 <div class="inline-flex gap-2 items-center">
                     <EnvelopeIcon class="icon-primary"/>
-                    <label for="show_email" class="text-primary">Email</label>
+                    <label for="show_email" class="text-primary"><span v-t="'AuthMyAccount.email'"></span></label>
                 </div>
                 <input id="show_email" class="no-edit-input" v-model="form.email" type="text"/>
                 <div v-if="form.errors.email" class="input-error">{{ form.errors.email }}</div>
@@ -96,14 +96,14 @@
             <div class="my-account-input-box">
                 <div class="inline-flex gap-2 items-center">
                     <PhoneIcon class="icon-primary"/>
-                    <label for="show_phone" class="text-primary">Téléphone</label>
+                    <label for="show_phone" class="text-primary"><span v-t="'AuthMyAccount.phone'"></span></label>
                 </div>
                 <input id="show_phone" class="no-edit-input" v-model="form.phone" type="tel"/>
                 <div v-if="form.errors.phone" class="input-error">{{ form.errors.phone }}</div>
             </div>
             <div class="flex flex-col items-center w-full md:w-1/2">
                 <button class="btn-primary-rounded w-2/3 md:w-2/3 text-center" type="button" @click="showEditProfil">
-                    Modifier
+                    <span v-t="'AuthMyAccount.edit'"></span>
                 </button>
             </div>
         </section>
@@ -111,9 +111,9 @@
 
 
     <div class="flex flex-col gap-4 items-center p-10">
-        <div><Link class="text-center text-md" v-if="showInstallButton" @click="installPWA"> Installer l'application </Link></div>
+        <div><Link class="text-center text-md" v-if="showInstallButton" @click="installPWA"> <span v-t="'AuthMyAccount.install'"></span></Link></div>
         <div id="push-permission"></div>
-        <div><Link class="text-center text-xs" :href="route('logout')" method="delete" as="button"> Déconnexion </Link></div>
+        <div><Link class="text-center text-xs" :href="route('logout')" method="delete" as="button"> <span v-t="'AuthMyAccount.log_out'"></span> </Link></div>
     </div>
 
 </template>
