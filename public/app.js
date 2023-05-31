@@ -1,4 +1,6 @@
-export async function main(){
+
+
+export async function main() {
     const permission = document.getElementById('push-permission')
 
     if (!permission ||
@@ -10,7 +12,7 @@ export async function main(){
     }
 
     const button = document.createElement('button')
-    button.innerText = 'Recevoir les notifications'
+    button.innerText = 'Get notifications'
     permission.appendChild(button)
     button.addEventListener('click', askPermission)
 

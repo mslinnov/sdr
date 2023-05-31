@@ -25,7 +25,7 @@
                                        class="flex items-center flex-col justify-between w-7 text-center rounded-full p-1 cursor-pointer border-2 drop-shadow-sm
                               border-white hover:text-gray-600 hover:bg-blue-500
                               peer-checked:border-blue-500 peer-checked:border-2 peer-checked:bg-blue-600"
-                                       :class="'survey-scale-selector-'+n"
+                                       :class="surveyElement.id === 5 ? 'survey-scale-selector-'+(11-n) :'survey-scale-selector-'+n"
                                 @click="resetFormElement">
                                     <div class="text-xs text-gray-400 font-medium text-white">
                                         {{n}}

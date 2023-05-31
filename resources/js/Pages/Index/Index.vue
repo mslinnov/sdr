@@ -12,39 +12,6 @@
     <div class="mt-4">
         <Link class="btn-primary-rounded" :href="route('notifyAllPlayers')">Envoyer notification</Link>
     </div>
-<!--    <DashbordLayout>-->
-<!--        <template #summary>-->
-
-<!--            <div class="grid grid-cols-12 py-8 gap-8">-->
-<!--                <Box class="col-span-12 lg:col-span-6">-->
-<!--                    <template #header>Overall Condition</template>-->
-<!--                    <OverallCondition-->
-<!--                        :total_reviews="overall_condition"-->
-<!--                        :overall_condition_types="overall_condition_types"-->
-<!--                    />-->
-<!--                </Box>-->
-<!--                <Box class="col-span-6">-->
-<!--                    <template #header>Survey</template>-->
-<!--                    <div> <h2>Contenue</h2> </div>-->
-<!--                </Box>-->
-<!--                <Box class="col-span-6">-->
-<!--                    <template #header>-->
-<!--                        Injuries-->
-<!--                    </template>-->
-<!--                    <div> <h2>Contenue</h2> </div>-->
-<!--                </Box>-->
-<!--            </div>-->
-
-<!--        </template>-->
-<!--        <template #players>-->
-<!--            <PlayerDashboard-->
-<!--            :players="players"-->
-<!--            :overall_condition_types="overall_condition_types"/>-->
-<!--        </template>-->
-<!--        <template #export>-->
-<!--            <ExportDataDashboard :weeks="weeks"/>-->
-<!--        </template>-->
-<!--    </DashbordLayout>-->
 
 
 
