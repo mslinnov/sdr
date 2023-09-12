@@ -94,7 +94,7 @@ const messages = {
             Great : 'Great',
         },
         SurveyPhysique:{
-            SurveyName: 'Pyhique',
+            SurveyName: 'Physique',
             sleeping_title : 'How would you rate the quality of your sleep over the last 7 days?',
             sleeping_legend_1 : 'Slept very badly',
             sleeping_legend_10 : 'Slept very well',
@@ -263,7 +263,7 @@ const messages = {
             Great : 'Super',
         },
         SurveyPhysique:{
-            SurveyName: 'Pyhique',
+            SurveyName: 'Physique',
             sleeping_title : 'Comment juges-tu la qualité de ton sommeil sur les 7 derniers jours ?',
             sleeping_legend_1 : 'Très mal dormis',
             sleeping_legend_10 : 'Très bien dormis',
